@@ -126,9 +126,9 @@
     margin-bottom: 13px;
     line-height: 125%;
      /*text-indent: 25px; */
-    background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+    background-image: linear-gradient(to right, #000 20%, rgba(255, 255, 255, 0) 0%);
     background-position: bottom;
-    background-size: 10px 1px;
+    background-size: 10px 2px;
     background-repeat: repeat-x;
 
     text-align: left;
