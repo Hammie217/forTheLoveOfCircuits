@@ -17,15 +17,35 @@
       </div>
 
       
-      <p class="Section">1 &ensp; Introduction</p>
+      <p class="Section">Contents</p>
+<div style="padding-bottom: 50px;"></div>
+
+
+<div>
+    <div class="contentsSection">1 Introduction</div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#voltageFollower">1.1 Voltage Follower</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#invertingAmplifier">1.2 Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#schmittTrigger">1.3 Schmitt Trigger</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexInvertingAmplifier">1.4 Complex Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#noninvertingAmplifier">1.5 Non-inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexNoninvertingAmplifier">1.6 Complex Non-inverting Amplifier</a></div>
+</div>
+
+<div style="padding-bottom: 50px;"></div>
+
+
+
+
+
+<p class="Section">1 &ensp; Introduction</p>
     <p class="BodyText">Lorem impsum.
         When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
     </p>
 
-    <p class="SubSection">1.1 &ensp; Voltage Follower</p>
+    <a class="SubSection" name="voltageFollower">1.1 &ensp; Voltage Follower</a>
     <div class="figure">
-        <img src="assets/svgs/voltageFollower.svg" class="include">
+        <img src="assets/svgs/voltageFollower.svg" class="include" >
         <p class="caption">Figure 1:</p>
     </div>
     <p class="BodyText">
@@ -41,15 +61,15 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         $$ \frac{v_o}{v_i}=1 $$
     </p>
 
-    <p class="SubSection">1.2 &ensp; Inverting Amplifier</p>
+    <a class="SubSection" name="invertingAmplifier">1.2 &ensp; Inverting Amplifier</a>
     <div class="figure">
-        <img src="assets/svgs/invertingAmplifier.svg" class="include">
+        <img src="assets/svgs/invertingAmplifier.svg" class="include" >
         <p class="caption">Figure 2:</p>
     </div>
     <p class="BodyText">
         Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\).
         $$ v_o=-A_vv_- $$
-        Treating \( R_1 \) and \( R_2 \) as a potential divider and assuming no current into the opamp.
+        Assuming no current into the opamp and treating \( R_1 \) and \( R_2 \) as a potential divider.
         $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=v_- $$
         Subsituting for
         $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=-\frac{v_o}{A_v} $$
@@ -62,7 +82,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
     
 
-    <p class="SubSection">1.3 &ensp; Schmitt Trigger</p>
+    <a class="SubSection" name="schmittTrigger">1.3 &ensp; Schmitt Trigger</a>
     <div class="figure">
         <img src="assets/svgs/schmittTrigger.svg" class="include">
         <p class="caption">Figure 3:</p>
@@ -85,23 +105,64 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         <p class="caption">Figure 4: Schmitt Trigger response</p>
     </div>
 
-    <p class="SubSection">1.4 &ensp; Complex Inverting Amplifier</p>
+    <a class="SubSection" name="complexInvertingAmplifier">1.4 &ensp; Complex Inverting Amplifier</a>
     <div class="figure">
         <img src="assets/svgs/complexInvertingAmplifier.svg" class="include">
         <p class="caption">Figure 5:</p>
     </div>
+    <p class="BodyText">
+        Similar to a typical inverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
+        Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\).
+        $$ v_o=-A_vv_- $$
+        Assuming no current into the opamp and treating \( z_1 \) and \( z_2 \) as a complex potential divider.
+        $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=v_- $$
+        Subsituting for
+        $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=-\frac{v_o}{A_v} $$
+        $$ v_o(\frac{z_1}{z_1+z_2}+\frac{1}{A_v})=v_i(\frac{z_1}{z_1+z_2}-1) $$
+        rearranging for
+        $$ \frac{v_o}{v_i}=\frac{\frac{z_1}{z_1+z_2}-1}{\frac{z_1}{z_1+z_2}+\frac{1}{A_v}} = \frac{-z_2}{z_1+\frac{z_1+z_2}{A_v}} $$
+        Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
+        $$ \frac{v_o}{v_i}=-\frac{z_2}{z_1} $$
+    </p>
 
-    <p class="SubSection">1.5 &ensp; Noninverting Amplifier</p>
+    <a class="SubSection" name="noninvertingAmplifier">1.5 &ensp; Noninverting Amplifier</a>
     <div class="figure">
         <img src="assets/svgs/noninvertingAmplifier.svg" class="include">
         <p class="caption">Figure 6:</p>
     </div>
+    <p class="BodyText">
+        Assuming no current into the opamp
+        $$  i_1=i_2 $$
+        $$ \therefore v_-=v_o\frac{R_2}{R_1+R_2} $$
+        Given
+        $$ v_o=A_v(v_+-v_-) $$
+        Substituing in for
+        $$ v_o=A_v(v_i-v_o\frac{R_2}{R_1+R_2}) $$
+        Rearranging for
+        $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{R_2}{R_1+R_2}} $$
+        Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
+        $$ \frac{v_o}{v_i}=1+\frac{R_1}{R_2} $$
+    </p>
 
-    <p class="SubSection">1.6 &ensp; Complex Noninverting Amplifier</p>
+    <a class="SubSection" name="complexNoninvertingAmplifier">1.6 &ensp; Complex Noninverting Amplifier</a>
     <div class="figure">
         <img src="assets/svgs/complexNoninvertingAmplifier.svg" class="include">
         <p class="caption">Figure 7:</p>
     </div>
+    <p class="BodyText">
+        Similar to a typical noninverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
+        Assuming no current into the opamp
+        $$  i_1=i_2 $$
+        $$ \therefore v_-=v_o\frac{z_2}{z_1+z_2} $$
+        Given
+        $$ v_o=A_v(v_+-v_-) $$
+        Substituing in for
+        $$ v_o=A_v(v_i-v_o\frac{z_2}{z_1+z_2}) $$
+        Rearranging for
+        $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{z_2}{z_1+z_2}} $$
+        Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
+        $$ \frac{v_o}{v_i}=1+\frac{z_1}{z_2} $$
+    </p>
 
 
     </div>
