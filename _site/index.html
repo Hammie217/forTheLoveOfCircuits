@@ -22,13 +22,18 @@
 
 
 <div>
-    <div class="contentsSection">1 Introduction</div>
+    <div class="contentsSection">1 Opamp Circuits</div>
     <div class="contentsSubSection"><a class="contentsSubSectionText" href="#voltageFollower">1.1 Voltage Follower</a></div>
     <div class="contentsSubSection"><a class="contentsSubSectionText" href="#invertingAmplifier">1.2 Inverting Amplifier</a></div>
     <div class="contentsSubSection"><a class="contentsSubSectionText" href="#schmittTrigger">1.3 Schmitt Trigger</a></div>
     <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexInvertingAmplifier">1.4 Complex Inverting Amplifier</a></div>
     <div class="contentsSubSection"><a class="contentsSubSectionText" href="#noninvertingAmplifier">1.5 Non-inverting Amplifier</a></div>
     <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexNoninvertingAmplifier">1.6 Complex Non-inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#integrator">1.7 Integrator</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#differentiator">1.8 Differentiator</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#summingInvertingAmplifier">1.9 Summing Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#summingNoninvertingAmplifier">1.10 Summing Non-Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#differentialAmplifier">1.11 Differential Amplifier</a></div>
 </div>
 
 <div style="padding-bottom: 50px;"></div>
@@ -37,10 +42,9 @@
 
 
 
-<p class="Section">1 &ensp; Introduction</p>
-    <p class="BodyText">Lorem impsum.
-        When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+<p class="Section">1 &ensp; Opamp Circuits</p>
+    <p class="BodyText">
+        A collection of key opamp circuits.
     </p>
 
     <a class="SubSection" name="voltageFollower">1.1 &ensp; Voltage Follower</a>
@@ -162,6 +166,50 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{z_2}{z_1+z_2}} $$
         Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
         $$ \frac{v_o}{v_i}=1+\frac{z_1}{z_2} $$
+    </p>
+
+
+
+
+    <a class="SubSection" name="integrator">1.7 &ensp; Integrator</a>
+    <div class="figure">
+        <img src="assets/svgs/integrator.svg" class="include">
+        <p class="caption">Figure 8:</p>
+    </div>
+    <p class="BodyText">
+    </p>
+
+
+    <a class="SubSection" name="differentiator">1.8 &ensp; Differentiator</a>
+    <div class="figure">
+        <img src="assets/svgs/differentiator.svg" class="include">
+        <p class="caption">Figure 9:</p>
+    </div>
+    <p class="BodyText">
+    </p>
+
+    <a class="SubSection" name="summingInvertingAmplifier">1.9 &ensp; Summing Inverting Amplifier</a>
+    <div class="figure">
+        <img src="assets/svgs/summingInvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 10:</p>
+    </div>
+    <p class="BodyText">
+    </p>
+
+    <a class="SubSection" name="summingNoninvertingAmplifier">1.10 &ensp; Summing Non-Inverting Amplifier</a>
+    <div class="figure">
+        <img src="assets/svgs/summingNoninvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 11:</p>
+    </div>
+    <p class="BodyText">
+    </p>
+
+    <a class="SubSection" name="differentialAmplifier">1.11 &ensp; Differential Amplifier</a>
+    <div class="figure">
+        <img src="assets/svgs/differentialAmplifier.svg" class="include">
+        <p class="caption">Figure 12:</p>
+    </div>
+    <p class="BodyText">
     </p>
 
 
