@@ -176,6 +176,14 @@ abstract: Lorem impsum.
         <p class="caption">Figure 9:</p>
     </div>
     <p class="BodyText">
+        It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
+        Assuming no current into the opamp
+        $$  i_r+i_c=0  $$
+        Using \( I=C\frac{dv}{dt} \)
+        $$  I_c=C_1\frac{dv_o-dv_-}{dt}=-\frac{v_i-v_-}{R_1}  $$
+        Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \)
+        $$  C_1\frac{dv_o}{dt}=-\frac{v_i}{R_1}  $$
+        Integrate for 0 to t where the opamp never saturates and \( R_1\) and \( C_1\) are constant
         $$ v_o=-\frac{1}{R_1C_1}\int_0^t v_i \,dt $$
     </p>
 
@@ -186,6 +194,14 @@ abstract: Lorem impsum.
         <p class="caption">Figure 10:</p>
     </div>
     <p class="BodyText">
+        It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
+        Assuming no current into the opamp
+        $$  i_r+i_c=0  $$
+        Using \( I=C\frac{dv}{dt} \)
+        $$  I_c=C_1\frac{dv_i-dv_-}{dt}=-\frac{v_o-v_-}{R_1}  $$
+        Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \)
+        $$  C_1\frac{dv_i}{dt}=-\frac{v_o}{R_1}  $$
+        Rearrange for
         $$ v_o=-R_1C_1\frac{ dv_i}{dt} $$
 
     </p>
@@ -196,8 +212,13 @@ abstract: Lorem impsum.
         <p class="caption">Figure 11:</p>
     </div>
     <p class="BodyText">
+        Assuming no current into the opamp
         $$  i_1+i_2+i_3=-i_4  $$
-        $$  \frac{v_{i1}}{R_1}+\frac{v_{i2}}{R_2}+\frac{v_{i3}}{R_3}=-\frac{v_o}{R_4} $$
+        $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{i2}-v_-}{R_2}+\frac{v_{i3}-v_-}{R_3}=-\frac{v_o-v_-}{R_4} $$
+        $$  \frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4+v_{o}R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}=v_- $$
+        $$  v_o=\frac{-A_v\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}{1+A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}  $$
+        Assuming \( A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}>>1 \)
+        $$  v_o=-\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_1R_2R_3}  $$
         if \( R_1=R_2=R_3=R_i\)
         $$  v_o=-\frac{R_4}{R_i}(v_{i1}+v_{i3}+v_{i3})  $$
     </p>
@@ -214,12 +235,12 @@ abstract: Lorem impsum.
         if \( R_1=R_2=R_3=R_i\)
         $$  \frac{v_{i1}+v_{i2}+v_{i3}}{3}=v_{+} $$
         looking at \( v_-\) and assuming no current into the opamp
-        $$  v_-=v_o\frac{R_5}{R_4}  $$
+        $$  v_-=v_o\frac{R_5}{R_4+R_5}  $$
         Subsitute into \( v_o=A_v(v_+-v_-)\)
-        $$  v_o=A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3}-v_o\frac{R_5}{R_4})  $$
-        $$  v_o=\frac{A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3})}{(1+A_v\frac{R_5}{R_4})}  $$
-        Assuming \( A_v\frac{R_5}{R_4}>>1 \)
-        $$  v_o=\frac{R_4}{R_5}(\frac{v_{i1}+v_{i2}+v_{i3}}{3})  $$
+        $$  v_o=A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3}-v_o\frac{R_5}{R_4+R_5})  $$
+        $$  v_o=\frac{A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3})}{(1+A_v\frac{R_5}{R_4+R_5})}  $$
+        Assuming \( A_v\frac{R_5}{R_4+R_5}>>1 \)
+        $$  v_o=\frac{R_4+R_5}{R_5}(\frac{v_{i1}+v_{i2}+v_{i3}}{3})  $$
 
     </p>
 
@@ -229,21 +250,21 @@ abstract: Lorem impsum.
         <p class="caption">Figure 13:</p>
     </div>
     <p class="BodyText">
-        Looking at v_- and assuming no current into the opamp.
+        Looking at \( v_- \) and assuming no current into the opamp.
         $$  i_1+i_2=0  $$
         $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{o}-v_-}{R_2}=0  $$
         $$  R_2v_{i1}+R_1v_{o}=v_-(R_1+R_2)  $$
         $$  \frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2}=v_-  $$
-        Looking at v_+ and assuming no current into the opamp.
-        $$  v_+=v_{i2}\frac{R_4}{R_3}  $$
+        Looking at \( v_+ \) and assuming no current into the opamp.
+        $$  v_+=v_{i2}\frac{R_4}{R_3+R_4}  $$
         Subsitute into \( v_o=A_v(v_+-v_-)\)
-        $$  v_o=A_v(v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2})  $$
-        $$  v_o=\frac{A_v(v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}}{R_1+R_2})}{1+\frac{A_vR_1}{R_1+R_2}}  $$
+        $$  v_o=A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2})  $$
+        $$  v_o=\frac{A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2})}{1+\frac{A_vR_1}{R_1+R_2}}  $$
         Assuming \( \frac{A_vR_1}{(R_1+R_2)}>>1 \)
-        $$  v_o=\frac{v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}}{R_1+R_2}}{\frac{R_1}{R_1+R_2}}  $$
-        $$  v_o=\frac{R_1+R_2}{R_1}v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}}{R_1}  $$
+        $$  v_o=\frac{v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2}}{\frac{R_1}{R_1+R_2}}  $$
+        $$  v_o=v_{i2}\frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}-\frac{R_2v_{i1}}{R_1}  $$
         if \( R_1=R_3 \)  and \( R_2=R_4 \)
-        $$  v_o=\frac{R_1R_2+R_2^2}{R_1^2}v_{i2}-\frac{R_2v_{i1}}{R_1}  $$
+        $$  v_o=\frac{R_2}{R_1}(v_{i2}-v_{i1})  $$
 
 
 
