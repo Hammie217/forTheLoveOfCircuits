@@ -23,17 +23,18 @@
 
 <div>
     <div class="contentsSection">1 Opamp Circuits</div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#voltageFollower">1.1 Voltage Follower</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#invertingAmplifier">1.2 Inverting Amplifier</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#schmittTrigger">1.3 Schmitt Trigger</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexInvertingAmplifier">1.4 Complex Inverting Amplifier</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#noninvertingAmplifier">1.5 Non-inverting Amplifier</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexNoninvertingAmplifier">1.6 Complex Non-inverting Amplifier</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#integrator">1.7 Integrator</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#differentiator">1.8 Differentiator</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#summingInvertingAmplifier">1.9 Summing Inverting Amplifier</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#summingNoninvertingAmplifier">1.10 Summing Non-Inverting Amplifier</a></div>
-    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#differentialAmplifier">1.11 Differential Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#opamp">1.1 Opamp</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#voltageFollower">1.2 Voltage Follower</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#invertingAmplifier">1.3 Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#schmittTrigger">1.4 Schmitt Trigger</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexInvertingAmplifier">1.5 Complex Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#noninvertingAmplifier">1.6 Non-inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#complexNoninvertingAmplifier">1.7 Complex Non-inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#integrator">1.8 Integrator</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#differentiator">1.9 Differentiator</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#summingInvertingAmplifier">1.10 Summing Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#summingNoninvertingAmplifier">1.11 Summing Non-Inverting Amplifier</a></div>
+    <div class="contentsSubSection"><a class="contentsSubSectionText" href="#differentialAmplifier">1.12 Differential Amplifier</a></div>
 </div>
 
 <div style="padding-bottom: 50px;"></div>
@@ -47,10 +48,18 @@
         A collection of key opamp circuits.
     </p>
 
-    <a class="SubSection" name="voltageFollower">1.1 &ensp; Voltage Follower</a>
+    <a class="SubSection" name="voltageFollower">1.1 &ensp; Opamp</a>
+    <div class="figure">
+        <p class="caption">Figure 1:</p>
+    </div>
+    <p class="BodyText">
+        $$ v_o=A_v(v_+-v_-)$$
+    </p>
+
+    <a class="SubSection" name="voltageFollower">1.2 &ensp; Voltage Follower</a>
     <div class="figure">
         <img src="assets/svgs/voltageFollower.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 2:</p>
     </div>
     <p class="BodyText">
         Given
@@ -65,10 +74,10 @@
         $$ \frac{v_o}{v_i}=1 $$
     </p>
 
-    <a class="SubSection" name="invertingAmplifier">1.2 &ensp; Inverting Amplifier</a>
+    <a class="SubSection" name="invertingAmplifier">1.3 &ensp; Inverting Amplifier</a>
     <div class="figure">
         <img src="assets/svgs/invertingAmplifier.svg" class="include" >
-        <p class="caption">Figure 2:</p>
+        <p class="caption">Figure 3:</p>
     </div>
     <p class="BodyText">
         Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\).
@@ -86,10 +95,10 @@
 
     
 
-    <a class="SubSection" name="schmittTrigger">1.3 &ensp; Schmitt Trigger</a>
+    <a class="SubSection" name="schmittTrigger">1.4 &ensp; Schmitt Trigger</a>
     <div class="figure">
         <img src="assets/svgs/schmittTrigger.svg" class="include">
-        <p class="caption">Figure 3:</p>
+        <p class="caption">Figure 4:</p>
     </div>
     <p class="BodyText">
         In a Schmitt Trigger the op-amp is setup in positive feedback meaning for an increase in voltage at \( v_+ \) will increase \( v_o \) and visa versa and therefore \( v_+ \) leading to a system always in saturation.
@@ -106,13 +115,13 @@
     </p>
     <div class="figure">
         <img src="assets/svgs/schmittTriggerDiagram.svg" class="include">
-        <p class="caption">Figure 4: Schmitt Trigger response</p>
+        <p class="caption">Figure 5: Schmitt Trigger response</p>
     </div>
 
-    <a class="SubSection" name="complexInvertingAmplifier">1.4 &ensp; Complex Inverting Amplifier</a>
+    <a class="SubSection" name="complexInvertingAmplifier">1.5 &ensp; Complex Inverting Amplifier</a>
     <div class="figure">
         <img src="assets/svgs/complexInvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 5:</p>
+        <p class="caption">Figure 6:</p>
     </div>
     <p class="BodyText">
         Similar to a typical inverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
@@ -129,10 +138,10 @@
         $$ \frac{v_o}{v_i}=-\frac{z_2}{z_1} $$
     </p>
 
-    <a class="SubSection" name="noninvertingAmplifier">1.5 &ensp; Noninverting Amplifier</a>
+    <a class="SubSection" name="noninvertingAmplifier">1.6 &ensp; Noninverting Amplifier</a>
     <div class="figure">
         <img src="assets/svgs/noninvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 6:</p>
+        <p class="caption">Figure 7:</p>
     </div>
     <p class="BodyText">
         Assuming no current into the opamp
@@ -148,10 +157,10 @@
         $$ \frac{v_o}{v_i}=1+\frac{R_1}{R_2} $$
     </p>
 
-    <a class="SubSection" name="complexNoninvertingAmplifier">1.6 &ensp; Complex Noninverting Amplifier</a>
+    <a class="SubSection" name="complexNoninvertingAmplifier">1.7 &ensp; Complex Noninverting Amplifier</a>
     <div class="figure">
         <img src="assets/svgs/complexNoninvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 7:</p>
+        <p class="caption">Figure 8:</p>
     </div>
     <p class="BodyText">
         Similar to a typical noninverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
@@ -171,45 +180,88 @@
 
 
 
-    <a class="SubSection" name="integrator">1.7 &ensp; Integrator</a>
+    <a class="SubSection" name="integrator">1.8 &ensp; Integrator</a>
     <div class="figure">
         <img src="assets/svgs/integrator.svg" class="include">
-        <p class="caption">Figure 8:</p>
-    </div>
-    <p class="BodyText">
-    </p>
-
-
-    <a class="SubSection" name="differentiator">1.8 &ensp; Differentiator</a>
-    <div class="figure">
-        <img src="assets/svgs/differentiator.svg" class="include">
         <p class="caption">Figure 9:</p>
     </div>
     <p class="BodyText">
+        $$ v_o=-\frac{1}{R_1C_1}\int_0^t v_i \,dt $$
     </p>
 
-    <a class="SubSection" name="summingInvertingAmplifier">1.9 &ensp; Summing Inverting Amplifier</a>
+
+    <a class="SubSection" name="differentiator">1.9 &ensp; Differentiator</a>
     <div class="figure">
-        <img src="assets/svgs/summingInvertingAmplifier.svg" class="include">
+        <img src="assets/svgs/differentiator.svg" class="include">
         <p class="caption">Figure 10:</p>
     </div>
     <p class="BodyText">
+        $$ v_o=-R_1C_1\frac{ dv_i}{dt} $$
+
     </p>
 
-    <a class="SubSection" name="summingNoninvertingAmplifier">1.10 &ensp; Summing Non-Inverting Amplifier</a>
+    <a class="SubSection" name="summingInvertingAmplifier">1.10 &ensp; Summing Inverting Amplifier</a>
     <div class="figure">
-        <img src="assets/svgs/summingNoninvertingAmplifier.svg" class="include">
+        <img src="assets/svgs/summingInvertingAmplifier.svg" class="include">
         <p class="caption">Figure 11:</p>
     </div>
     <p class="BodyText">
+        $$  i_1+i_2+i_3=-i_4  $$
+        $$  \frac{v_{i1}}{R_1}+\frac{v_{i2}}{R_2}+\frac{v_{i3}}{R_3}=-\frac{v_o}{R_4} $$
+        if \( R_1=R_2=R_3=R_i\)
+        $$  v_o=-\frac{R_4}{R_i}(v_{i1}+v_{i3}+v_{i3})  $$
     </p>
 
-    <a class="SubSection" name="differentialAmplifier">1.11 &ensp; Differential Amplifier</a>
+    <a class="SubSection" name="summingNoninvertingAmplifier">1.11 &ensp; Summing Non-Inverting Amplifier</a>
     <div class="figure">
-        <img src="assets/svgs/differentialAmplifier.svg" class="include">
+        <img src="assets/svgs/summingNoninvertingAmplifier.svg" class="include">
         <p class="caption">Figure 12:</p>
     </div>
     <p class="BodyText">
+        Assuming no current into the opamp
+        $$  i_1+i_2+i_3=0  $$
+        $$  \frac{v_{i1}-v_+}{R_1}+\frac{v_{i2}-v_+}{R_2}+\frac{v_{i3}-v_+}{R_3}=0 $$
+        if \( R_1=R_2=R_3=R_i\)
+        $$  \frac{v_{i1}+v_{i2}+v_{i3}}{3}=v_{+} $$
+        looking at \( v_-\) and assuming no current into the opamp
+        $$  v_-=v_o\frac{R_5}{R_4}  $$
+        Subsitute into \( v_o=A_v(v_+-v_-)\)
+        $$  v_o=A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3}-v_o\frac{R_5}{R_4})  $$
+        $$  v_o=\frac{A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3})}{(1+A_v\frac{R_5}{R_4})}  $$
+        Assuming \( A_v\frac{R_5}{R_4}>>1 \)
+        $$  v_o=\frac{R_4}{R_5}(\frac{v_{i1}+v_{i2}+v_{i3}}{3})  $$
+
+    </p>
+
+    <a class="SubSection" name="differentialAmplifier">1.12 &ensp; Differential Amplifier</a>
+    <div class="figure">
+        <img src="assets/svgs/differentialAmplifier.svg" class="include">
+        <p class="caption">Figure 13:</p>
+    </div>
+    <p class="BodyText">
+        Looking at v_- and assuming no current into the opamp.
+        $$  i_1+i_2=0  $$
+        $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{o}-v_-}{R_2}=0  $$
+        $$  R_2v_{i1}+R_1v_{o}=v_-(R_1+R_2)  $$
+        $$  \frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2}=v_-  $$
+        Looking at v_+ and assuming no current into the opamp.
+        $$  v_+=v_{i2}\frac{R_4}{R_3}  $$
+        Subsitute into \( v_o=A_v(v_+-v_-)\)
+        $$  v_o=A_v(v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2})  $$
+        $$  v_o=\frac{A_v(v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}}{R_1+R_2})}{1+\frac{A_vR_1}{R_1+R_2}}  $$
+        Assuming \( \frac{A_vR_1}{(R_1+R_2)}>>1 \)
+        $$  v_o=\frac{v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}}{R_1+R_2}}{\frac{R_1}{R_1+R_2}}  $$
+        $$  v_o=\frac{R_1+R_2}{R_1}v_{i2}\frac{R_4}{R_3}-\frac{R_2v_{i1}}{R_1}  $$
+        if \( R_1=R_3 \)  and \( R_2=R_4 \)
+        $$  v_o=\frac{R_1R_2+R_2^2}{R_1^2}v_{i2}-\frac{R_2v_{i1}}{R_1}  $$
+
+
+
+
+
+
+
+
     </p>
 
 
