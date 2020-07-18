@@ -1,0 +1,228 @@
+- title: "Opamp Circuits"
+  theHtml: 
+    <p class="BodyText">
+        A collection of key opamp circuits.
+    </p>
+  subcategories:
+  - title: "Opamp"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/opamp.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+          $$ v_o=A_v(v_+-v_-)$$
+      </p>
+  - title: "Voltage Follower"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/voltageFollower.svg" class="include" >
+        <p class="caption">Figure 2:</p>
+      </div>
+      <p class="BodyText">
+          Given
+          $$ v_o=A_v(v_+-v_-)$$
+          $$ v_- = v_o $$
+          $$ v_+ = v_i $$
+          Subsitute in
+          $$ \therefore v_o=A_v(v_i-v_o)$$
+          rearrange for
+          $$ \frac{v_o}{v_i}=\frac{A_v}{A_v+1} $$
+          assuming \( A_v >> 1 \)
+          $$ \frac{v_o}{v_i}=1 $$
+      </p>
+  - title: Inverting Amplifier
+    theHtml:
+      <div class="figure">
+        <img src="assets/svgs/invertingAmplifier.svg" class="include" >
+        <p class="caption">Figure 3:</p>
+      </div>
+      <p class="BodyText">
+          Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\).
+          $$ v_o=-A_vv_- $$
+          Assuming no current into the opamp and treating \( R_1 \) and \( R_2 \) as a potential divider.
+          $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=v_- $$
+          Subsituting for
+          $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=-\frac{v_o}{A_v} $$
+          $$ v_o(\frac{R_1}{R_1+R_2}+\frac{1}{A_v})=v_i(\frac{R_1}{R_1+R_2}-1) $$
+          rearranging for
+          $$ \frac{v_o}{v_i}=\frac{\frac{R_1}{R_1+R_2}-1}{\frac{R_1}{R_1+R_2}+\frac{1}{A_v}} = \frac{-R_2}{R_1+\frac{R_1+R_2}{A_v}} $$
+          Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
+          $$ \frac{v_o}{v_i}=-\frac{R_2}{R_1} $$
+      </p>
+  - title: Schmitt Trigger
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/schmittTrigger.svg" class="include">
+        <p class="caption">Figure 4:</p>
+      </div>
+      <p class="BodyText">
+          In a Schmitt Trigger the op-amp is setup in positive feedback meaning for an increase in voltage at \( v_+ \) will increase \( v_o \) and visa versa and therefore \( v_+ \) leading to a system always in saturation.
+          Assuming \(v_o\) is currently saturated to the positive rail \(v_o=v_s\) and treating \( R_1 \) and \( R_2 \) as a potential divider.
+          $$ v_+=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$
+          To stop the system being in positive saturation \( v_+<=0 \)
+          substituting in for
+          $$ 0=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$
+          rearranging for
+          $$ v_i=-v_s\frac{R_1}{R_2}$$
+          This can be proven in the other direction similarly giving 
+          $$ v_i=v_s\frac{R_1}{R_2}$$
+          Giving a direction based resonse as seen below.
+      </p>
+      <div class="figure">
+        <img src="assets/svgs/schmittTriggerDiagram.svg" class="include">
+        <p class="caption">Figure 5:Schmitt Trigger response</p>
+      </div>
+  - title: Complex Inverting Amplifier
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/complexInvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 6:</p>
+      </div>
+      <p class="BodyText">
+          Similar to a typical inverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
+          Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\).
+          $$ v_o=-A_vv_- $$
+          Assuming no current into the opamp and treating \( z_1 \) and \( z_2 \) as a complex potential divider.
+          $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=v_- $$
+          Subsituting for
+          $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=-\frac{v_o}{A_v} $$
+          $$ v_o(\frac{z_1}{z_1+z_2}+\frac{1}{A_v})=v_i(\frac{z_1}{z_1+z_2}-1) $$
+          rearranging for
+          $$ \frac{v_o}{v_i}=\frac{\frac{z_1}{z_1+z_2}-1}{\frac{z_1}{z_1+z_2}+\frac{1}{A_v}} = \frac{-z_2}{z_1+\frac{z_1+z_2}{A_v}} $$
+          Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
+          $$ \frac{v_o}{v_i}=-\frac{z_2}{z_1} $$
+      </p>
+  - title: Noninverting Amplifier
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/noninvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 7:</p>
+      </div>
+      <p class="BodyText">
+          Assuming no current into the opamp
+          $$  i_1=i_2 $$
+          $$ \therefore v_-=v_o\frac{R_2}{R_1+R_2} $$
+          Given
+          $$ v_o=A_v(v_+-v_-) $$
+          Substituing in for
+          $$ v_o=A_v(v_i-v_o\frac{R_2}{R_1+R_2}) $$
+          Rearranging for
+          $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{R_2}{R_1+R_2}} $$
+          Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
+          $$ \frac{v_o}{v_i}=1+\frac{R_1}{R_2} $$
+      </p>
+  - title: Complex Noninverting Amplifier
+    theHtml: 
+      <div class="figure">
+          <img src="assets/svgs/complexNoninvertingAmplifier.svg" class="include">
+          <p class="caption">Figure 8:</p>
+      </div>
+      <p class="BodyText">
+          Similar to a typical noninverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
+          Assuming no current into the opamp
+          $$  i_1=i_2 $$
+          $$ \therefore v_-=v_o\frac{z_2}{z_1+z_2} $$
+          Given
+          $$ v_o=A_v(v_+-v_-) $$
+          Substituing in for
+          $$ v_o=A_v(v_i-v_o\frac{z_2}{z_1+z_2}) $$
+          Rearranging for
+          $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{z_2}{z_1+z_2}} $$
+          Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
+          $$ \frac{v_o}{v_i}=1+\frac{z_1}{z_2} $$
+      </p>
+  - title: Integrator
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/integrator.svg" class="include">
+        <p class="caption">Figure 9:</p>
+      </div>
+      <p class="BodyText">
+          It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
+          Assuming no current into the opamp
+          $$  i_r+i_c=0  $$
+          Using \( I=C\frac{dv}{dt} \)
+          $$  I_c=C_1\frac{dv_o-dv_-}{dt}=-\frac{v_i-v_-}{R_1}  $$
+          Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \)
+          $$  C_1\frac{dv_o}{dt}=-\frac{v_i}{R_1}  $$
+          Integrate for 0 to t where the opamp never saturates and \( R_1\) and \( C_1\) are constant
+          $$ v_o=-\frac{1}{R_1C_1}\int_0^t v_i \,dt $$
+      </p>
+  - title: Differentiator
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/differentiator.svg" class="include">
+        <p class="caption">Figure 10:</p>
+      </div>
+      <p class="BodyText">
+          It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
+          Assuming no current into the opamp
+          $$  i_r+i_c=0  $$
+          Using \( I=C\frac{dv}{dt} \)
+          $$  I_c=C_1\frac{dv_i-dv_-}{dt}=-\frac{v_o-v_-}{R_1}  $$
+          Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \)
+          $$  C_1\frac{dv_i}{dt}=-\frac{v_o}{R_1}  $$
+          Rearrange for
+          $$ v_o=-R_1C_1\frac{ dv_i}{dt} $$
+      </p>
+  - title: Summing Inverting Amplifier
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/summingInvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 11:</p>
+      </div>
+      <p class="BodyText">
+          Assuming no current into the opamp
+          $$  i_1+i_2+i_3=-i_4  $$
+          $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{i2}-v_-}{R_2}+\frac{v_{i3}-v_-}{R_3}=-\frac{v_o-v_-}{R_4} $$
+          $$  \frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4+v_{o}R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}=v_- $$
+          $$  v_o=\frac{-A_v\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}{1+A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}  $$
+          Assuming \( A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}>>1 \)
+          $$  v_o=-\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_1R_2R_3}  $$
+          if \( R_1=R_2=R_3=R_i\)
+          $$  v_o=-\frac{R_4}{R_i}(v_{i1}+v_{i3}+v_{i3})  $$
+      </p>
+  - title: Summing Non-Inverting Amplifier
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/summingNoninvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 12:</p>
+      </div>
+      <p class="BodyText">
+          Assuming no current into the opamp
+          $$  i_1+i_2+i_3=0  $$
+          $$  \frac{v_{i1}-v_+}{R_1}+\frac{v_{i2}-v_+}{R_2}+\frac{v_{i3}-v_+}{R_3}=0 $$
+          if \( R_1=R_2=R_3=R_i\)
+          $$  \frac{v_{i1}+v_{i2}+v_{i3}}{3}=v_{+} $$
+          looking at \( v_-\) and assuming no current into the opamp
+          $$  v_-=v_o\frac{R_5}{R_4+R_5}  $$
+          Subsitute into \( v_o=A_v(v_+-v_-)\)
+          $$  v_o=A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3}-v_o\frac{R_5}{R_4+R_5})  $$
+          $$  v_o=\frac{A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3})}{(1+A_v\frac{R_5}{R_4+R_5})}  $$
+          Assuming \( A_v\frac{R_5}{R_4+R_5}>>1 \)
+          $$  v_o=\frac{R_4+R_5}{R_5}(\frac{v_{i1}+v_{i2}+v_{i3}}{3})  $$
+      </p>
+  - title: Differential Amplifier
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/differentialAmplifier.svg" class="include">
+        <p class="caption">Figure 13:</p>
+      </div>
+      <p class="BodyText">
+          Looking at \( v_- \) and assuming no current into the opamp.
+          $$  i_1+i_2=0  $$
+          $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{o}-v_-}{R_2}=0  $$
+          $$  R_2v_{i1}+R_1v_{o}=v_-(R_1+R_2)  $$
+          $$  \frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2}=v_-  $$
+          Looking at \( v_+ \) and assuming no current into the opamp.
+          $$  v_+=v_{i2}\frac{R_4}{R_3+R_4}  $$
+          Subsitute into \( v_o=A_v(v_+-v_-)\)
+          $$  v_o=A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2})  $$
+          $$  v_o=\frac{A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2})}{1+\frac{A_vR_1}{R_1+R_2}}  $$
+          Assuming \( \frac{A_vR_1}{(R_1+R_2)}>>1 \)
+          $$  v_o=\frac{v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2}}{\frac{R_1}{R_1+R_2}}  $$
+          $$  v_o=v_{i2}\frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}-\frac{R_2v_{i1}}{R_1}  $$
+          if \( R_1=R_3 \)  and \( R_2=R_4 \)
+          $$  v_o=\frac{R_2}{R_1}(v_{i2}-v_{i1})  $$
+      </p>
