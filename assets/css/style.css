@@ -7,6 +7,10 @@
     src: url(../fonts/cmuserif_bold_macroman/cmunbx-webfont.woff);
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
 
 .LatexTitle{
     font-family: CMR;

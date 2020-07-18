@@ -11,7 +11,9 @@
         <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
+        For an input of \( v_+ \) and \( v_- \) the output \( v_o \) is the difference between the inputs multiplied by an open loop gain \( A_v \), usually in the range of hundreds of thousands. This simplification can be represented as the equation below.
           $$ v_o=A_v(v_+-v_-)$$
+          Opamp calculations commonly assume  \( A_v=\infty \) which, when in negative feedback leads to the assumption \( v_-=v_+ \). It is also commonly assumed opamps take no current on the input, like all assumptions this is valid until this current draw effects the voltage at the input.
       </p>
   - title: "Voltage Follower"
     theHtml: 
@@ -26,9 +28,9 @@
           $$ v_+ = v_i $$
           Subsitute in
           $$ \therefore v_o=A_v(v_i-v_o)$$
-          rearrange for
+          Rearrange for
           $$ \frac{v_o}{v_i}=\frac{A_v}{A_v+1} $$
-          assuming \( A_v >> 1 \)
+          Assuming \( A_v >> 1 \)
           $$ \frac{v_o}{v_i}=1 $$
       </p>
   - title: Inverting Amplifier
@@ -45,7 +47,7 @@
           Subsituting for
           $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=-\frac{v_o}{A_v} $$
           $$ v_o(\frac{R_1}{R_1+R_2}+\frac{1}{A_v})=v_i(\frac{R_1}{R_1+R_2}-1) $$
-          rearranging for
+          Rearranging for
           $$ \frac{v_o}{v_i}=\frac{\frac{R_1}{R_1+R_2}-1}{\frac{R_1}{R_1+R_2}+\frac{1}{A_v}} = \frac{-R_2}{R_1+\frac{R_1+R_2}{A_v}} $$
           Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
           $$ \frac{v_o}{v_i}=-\frac{R_2}{R_1} $$
@@ -61,9 +63,9 @@
           Assuming \(v_o\) is currently saturated to the positive rail \(v_o=v_s\) and treating \( R_1 \) and \( R_2 \) as a potential divider.
           $$ v_+=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$
           To stop the system being in positive saturation \( v_+<=0 \)
-          substituting in for
+          Substituting in for
           $$ 0=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$
-          rearranging for
+          Rearranging for
           $$ v_i=-v_s\frac{R_1}{R_2}$$
           This can be proven in the other direction similarly giving 
           $$ v_i=v_s\frac{R_1}{R_2}$$
@@ -88,7 +90,7 @@
           Subsituting for
           $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=-\frac{v_o}{A_v} $$
           $$ v_o(\frac{z_1}{z_1+z_2}+\frac{1}{A_v})=v_i(\frac{z_1}{z_1+z_2}-1) $$
-          rearranging for
+          Rearranging for
           $$ \frac{v_o}{v_i}=\frac{\frac{z_1}{z_1+z_2}-1}{\frac{z_1}{z_1+z_2}+\frac{1}{A_v}} = \frac{-z_2}{z_1+\frac{z_1+z_2}{A_v}} $$
           Assuming assuming \( A_v = \infty \) and the opamp isn't saturated
           $$ \frac{v_o}{v_i}=-\frac{z_2}{z_1} $$
