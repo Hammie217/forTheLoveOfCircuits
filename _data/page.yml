@@ -1,3 +1,163 @@
+- title: "Passive Circuits"
+  theHtml: 
+    <p class="BodyText">
+        A collection of key passive circuits.
+    </p>
+  subcategories:
+  - title: "Potential Divider"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/potentialDivider.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+      Summing currents
+      $$  I_{r1}=I_{r2}+I_{o}  $$
+      $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{R_2}+I_o  $$
+      Rearrange for
+      $$  v_o=\frac{R_2v_i-I_oR_1R_2}{R_1+R_2} $$
+      Assuming \( I_o\) is negligible
+      $$  \frac{v_o}{v_i}=\frac{R_2}{R_1+R_2}  $$
+      This derevation is common place and usually assumed in many calculations.
+      </p>
+  - title: "First-Order Standard Form"
+    theHtml: 
+      <p class="BodyText">
+      \( \tau=\frac{1}{\omega_0}\) and \( s=j\omega \) <br />
+      Low-pass
+      $$  \frac{v_o}{v_i}=k\frac{1}{1+s\tau} = k\frac{1}{1+j\frac{\omega}{\omega_0}}  $$
+      High-pass
+      $$  \frac{v_o}{v_i}=k\frac{s\tau}{1+s\tau} = k\frac{j\frac{\omega}{\omega_0}}{1+j\frac{\omega}{\omega_0}}  $$
+      Lead-Lag
+      $$  \frac{v_o}{v_i}=k\frac{1+s\tau_1}{1+s\tau_2} = k\frac{1+j\frac{\omega}{\omega_1}}{1+j\frac{\omega}{\omega_2}}  $$
+      </p>
+  - title: "Second-Order Standard Form"
+    theHtml: 
+      <p class="BodyText">
+      Low-pass
+      $$  \frac{v_o}{v_i} = k\frac{1}{1+ \frac{s\tau}{Q}+s^2\tau^2 } = k\frac{1}{1+j\frac{\omega}{Q\omega_0}-\frac{\omega^2}{\omega_0^2} } $$
+      High-pass
+      $$  \frac{v_o}{v_i} = k\frac{s^2\tau^2}{1+\frac{s\tau}{Q}+s^2\tau^2} = k\frac{-\frac{\omega^2}{\omega_0^2}}{1+j\frac{\omega}{Q\omega_0}-\frac{\omega^2}{\omega_0^2}} $$
+      Band-pass
+      $$  \frac{v_o}{v_i} = k\frac{\frac{s\tau}{Q}}{1+\frac{s\tau}{Q}+s^2\tau^2 } = k\frac{j\frac{\omega}{Q\omega_0}}{1+ j\frac{\omega}{Q\omega_0}-\frac{\omega^2}{\omega_0^2} } $$
+      Band-stop
+      $$  \frac{v_o}{v_i} = k\frac{1-s^2\tau^2}{1+ \frac{s\tau}{Q}+s^2\tau^2 } = k\frac{1+\frac{\omega}{\omega_0^2}}{1+ j\frac{\omega}{Q\omega_0}-\frac{\omega^2}{\omega_0^2} } $$
+      </p>
+  - title: "Low-pass C"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/lowPassC.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+      $$  I_{r1}=I_{c1}+I_{o}  $$
+      $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{\frac{1}{j\omega C_1}}+I_o  $$
+      Rearrange for
+      $$  v_o=\frac{v_i-I_oR_1}{1+j\omega C_1R_1}  $$
+      Assuming \( I_o\) is negligible
+      $$  \frac{v_o}{v_i}=\frac{1}{1+j\omega C_1R_1}  $$
+      Convert into first-order Standard form
+      $$  \frac{v_o}{v_i}=1\frac{1}{1+j\frac{\omega }{\frac{1}{C_1R_1}}}  $$
+      </p>
+  - title: "Low-pass L"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/lowPassL.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+      $$  I_{r1}=I_{l1}+I_{o}  $$
+      $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{j\omega L_1}+I_o  $$
+      Rearrange for
+      $$  v_o=\frac{v_ij\omega L_1-I_oR_1j\omega L_1}{R_1+j\omega L_1 } $$
+      Assuming \( I_o\) is negligible
+      $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1+j\omega L_1 } $$
+      Convert into first-order Standard form
+      $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1}\frac{1}{1+j\frac{\omega}{\frac{R_1}{L_1}} } $$
+      </p>
+  - title: "Low-pass LC"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/lowPassCL.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+        $$  I_{l1}=I_{c1}+I_{o}  $$
+        $$  \frac{v_i-v_o}{j\omega L_1}=\frac{v_o}{\frac{1}{j\omega C_1}}+I_o  $$
+        Rearrange for
+        $$  v_o=\frac{v_i-I_oj\omega L_1}{1-\omega^2 C_1L_1}  $$
+        Assuming \( I_o\) is negligible
+        $$  \frac{v_o}{v_i}=\frac{1}{1-\omega^2 C_1L_1}  $$
+        Convert into second-order Standard form
+        $$  \frac{v_o}{v_i} = 1\frac{1}{1-\frac{\omega^2}{\frac{1}{C_1L_1}} } $$
+      </p>
+  - title: "High-pass C"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/highPassC.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+      $$  I_{c1}=I_{r1}+I_{o}  $$
+      $$  \frac{v_i-v_o}{\frac{1}{j\omega C_1}}=\frac{v_o}{R_1}+I_o  $$
+      Rearrange for
+      $$  v_o=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$
+      Assuming \(I_o\) is negligible
+      $$  \frac{v_o}{v_i}=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$
+      Convert into first-order Standard form
+      $$  \frac{v_o}{v_i}=1\frac{j\frac{\omega}{\frac{1}{C_1R_1}} }{1+j\frac{\omega}{\frac{1}{C_1R_1}}}  $$
+      </p>
+  - title: "High-pass L"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/highPassL.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+      $$  I_{r1}=I_{l1}+I_{o}  $$
+      $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{j\omega L_1}+I_o  $$
+      Rearrange for
+      $$  v_o=\frac{v_ij\omega L_1-jI_oR_1\omega L_1}{R_1+j\omega L_1}  $$
+      Assuming \(I_o\) is negligible
+      $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1+j\omega L_1}  $$
+      Convert into first-order Standard form
+      $$  \frac{v_o}{v_i}=1\frac{j\frac{\omega}{\frac{R_1}{L_1}} }{1+j\frac{\omega}{\frac{R_1}{L_1}}}  $$
+      </p>
+  - title: "High-pass LC"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/highPassCL.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+        $$  I_{c1}=I_{l1}+I_{o}  $$
+        $$  \frac{v_i-v_o}{\frac{1}{j\omega C_1}}=\frac{v_o}{j\omega L_1}+I_o  $$
+        Rearrange for
+        $$  v_o=-\frac{v_i\omega^2 C_1 L_1+I_oj\omega L_1}{1-\omega^2 C_1 L_1}  $$
+        Assuming \( I_o\) is negligible
+        $$  \frac{v_o}{v_i}=-\frac{\omega^2 C_1 L_1}{1-\omega^2 C_1 L_1}  $$
+        Convert into second-order Standard form
+        $$  \frac{v_o}{v_i}=1\frac{-\frac{\omega^2}{\frac{1}{C_1 L_1}} }{1-\frac{\omega^2}{\frac{1}{C_1 L_1}}}  $$
+      </p>
+  - title: "Wheatstone Bridge"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/passiveCircuits/wheatstoneBridge.svg" class="include" >
+        <p class="caption">Figure 1:</p>
+      </div>
+      <p class="BodyText">
+      $$  v_+=v_i\frac{R_3}{R_3+R_1}  $$
+      $$  v_-=v_i\frac{R_4}{R_4+R_2}  $$
+      $$  v_o=v_+-v_-=v_i(\frac{R_3}{R_3+R_1}-\frac{R_4}{R_4+R_2} ) $$
+      $$  \frac{v_o}{v_i}= \frac{R_3}{R_3+R_1}-\frac{R_4}{R_4+R_2} $$
+      If \(R_3=R_1\) and \(R_4=R_2\) 
+      $$  \frac{v_o}{v_i}= \frac{R_1}{2R_1}-\frac{R_2}{2R_2}=0 $$
+      If \(R_3=R_1+\Delta R\) and \(R_4=R_2\) 
+      $$  \frac{v_o}{v_i}= \frac{R_1+\Delta R}{2R_1+\Delta R}-\frac{1}{2}=  \frac{\Delta R}{4R_1+2\Delta R} $$
+
+      </p>
+  
+
 - title: "Opamp Circuits"
   theHtml: 
     <p class="BodyText">
@@ -7,7 +167,7 @@
   - title: "Opamp"
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/opamp.svg" class="include" >
+        <img src="assets/svgs/opampCircuits/opamp.svg" class="include" >
         <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
@@ -18,8 +178,8 @@
   - title: "Voltage Follower"
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/voltageFollower.svg" class="include" >
-        <p class="caption">Figure 2:</p>
+        <img src="assets/svgs/opampCircuits/voltageFollower.svg" class="include" >
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Given
@@ -36,8 +196,8 @@
   - title: Inverting Amplifier
     theHtml:
       <div class="figure">
-        <img src="assets/svgs/invertingAmplifier.svg" class="include" >
-        <p class="caption">Figure 3:</p>
+        <img src="assets/svgs/opampCircuits/invertingAmplifier.svg" class="include" >
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\).
@@ -55,8 +215,8 @@
   - title: Schmitt Trigger
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/schmittTrigger.svg" class="include">
-        <p class="caption">Figure 4:</p>
+        <img src="assets/svgs/opampCircuits/schmittTrigger.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           In a Schmitt Trigger the op-amp is setup in positive feedback meaning for an increase in voltage at \( v_+ \) will increase \( v_o \) and visa versa and therefore \( v_+ \) leading to a system always in saturation.
@@ -72,14 +232,14 @@
           Giving a direction based resonse as seen below.
       </p>
       <div class="figure">
-        <img src="assets/svgs/schmittTriggerDiagram.svg" class="include">
-        <p class="caption">Figure 5:Schmitt Trigger response</p>
+        <img src="assets/svgs/opampCircuits/schmittTriggerDiagram.svg" class="include">
+        <p class="caption">Figure 2:Schmitt Trigger response</p>
       </div>
   - title: Complex Inverting Amplifier
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/complexInvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 6:</p>
+        <img src="assets/svgs/opampCircuits/complexInvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Similar to a typical inverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
@@ -98,8 +258,8 @@
   - title: Noninverting Amplifier
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/noninvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 7:</p>
+        <img src="assets/svgs/opampCircuits/noninvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Assuming no current into the opamp
@@ -117,8 +277,8 @@
   - title: Complex Noninverting Amplifier
     theHtml: 
       <div class="figure">
-          <img src="assets/svgs/complexNoninvertingAmplifier.svg" class="include">
-          <p class="caption">Figure 8:</p>
+          <img src="assets/svgs/opampCircuits/complexNoninvertingAmplifier.svg" class="include">
+          <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Similar to a typical noninverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
@@ -137,8 +297,8 @@
   - title: Integrator
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/integrator.svg" class="include">
-        <p class="caption">Figure 9:</p>
+        <img src="assets/svgs/opampCircuits/integrator.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
@@ -154,8 +314,8 @@
   - title: Differentiator
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/differentiator.svg" class="include">
-        <p class="caption">Figure 10:</p>
+        <img src="assets/svgs/opampCircuits/differentiator.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
@@ -171,8 +331,8 @@
   - title: Summing Inverting Amplifier
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/summingInvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 11:</p>
+        <img src="assets/svgs/opampCircuits/summingInvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Assuming no current into the opamp
@@ -188,8 +348,8 @@
   - title: Summing Non-Inverting Amplifier
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/summingNoninvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 12:</p>
+        <img src="assets/svgs/opampCircuits/summingNoninvertingAmplifier.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Assuming no current into the opamp
@@ -208,8 +368,8 @@
   - title: Differential Amplifier
     theHtml: 
       <div class="figure">
-        <img src="assets/svgs/differentialAmplifier.svg" class="include">
-        <p class="caption">Figure 13:</p>
+        <img src="assets/svgs/opampCircuits/differentialAmplifier.svg" class="include">
+        <p class="caption">Figure 1:</p>
       </div>
       <p class="BodyText">
           Looking at \( v_- \) and assuming no current into the opamp.
@@ -228,3 +388,4 @@
           if \( R_1=R_3 \)  and \( R_2=R_4 \)
           $$  v_o=\frac{R_2}{R_1}(v_{i2}-v_{i1})  $$
       </p>
+

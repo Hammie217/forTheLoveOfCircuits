@@ -30,6 +30,7 @@ abstract: This is a website dedicated to simpifying and explaining the operation
 
 
 {% assign i = 0 %}
+{% assign figNo = 0 %}
 {% for entry in site.data.page %}
 {% assign i = i | plus:1 %}
     <p class="Section">{{ i }} &ensp; {{ entry.title }}</p>
@@ -38,7 +39,40 @@ abstract: This is a website dedicated to simpifying and explaining the operation
     {% for subentry in entry.subcategories %}
         {% assign ii = ii | plus:1 %}
         <a class="SubSection" name="{{ subentry.title | replace: ' ', '' }}">{{ i }}.{{ ii }} &ensp; {{ subentry.title }}</a>
-            {{ subentry.theHtml }} 
+            {% if subentry.theHtml contains 'Figure 3:' %}
+            {% assign figNo = figNo | plus:3 %}
+            {% assign figText = '' | append: 'Figure ' | append: figNo | append: ':' %}
+            {% assign sectionText = subentry.theHtml | replace: 'Figure 3:', figText %} 
+            {% assign figNo = figNo | minus:1 %}
+            {% assign figText = '' | append: 'Figure ' | append: figNo | append: ':' %}
+            {% assign sectionText = sectionText | replace: 'Figure 2:', figText %} 
+            {% assign figNo = figNo | minus:1 %}
+            {% assign figText = '' | append: 'Figure ' | append: figNo | append: ':' %}
+            {% assign sectionText = sectionText | replace: 'Figure 1:', figText %}
+            {% assign figNo = figNo | plus:2 %}
+            {{ sectionText }}
+
+
+            {% elsif subentry.theHtml contains 'Figure 2:' %}
+            {% assign figNo = figNo | plus:2 %}
+            {% assign figText = '' | append: 'Figure ' | append: figNo | append: ':' %}
+            {% assign sectionText = subentry.theHtml | replace: 'Figure 2:', figText %} 
+            {% assign figNo = figNo | minus:1 %}
+            {% assign figText = '' | append: 'Figure ' | append: figNo | append: ':' %}
+            {% assign sectionText = sectionText | replace: 'Figure 1:', figText %}
+            {% assign figNo = figNo | plus:1 %}
+            {{ sectionText }}
+
+
+            {% elsif subentry.theHtml contains 'Figure 1:' %}
+            {% assign figNo = figNo | plus:1 %}
+            {% assign figText = '' | append: 'Figure ' | append: figNo | append: ':' %}
+            {{subentry.theHtml | replace: 'Figure 1:', figText }} 
+
+            {% else %}
+            {{subentry.theHtml }} 
+            {% endif %}
+
     {% endfor %}
 {% endfor %}
 
