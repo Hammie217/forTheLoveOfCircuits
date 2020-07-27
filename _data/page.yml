@@ -8,7 +8,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/potentialDivider.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Simple potential divider circuit</p>
       </div>
       <p class="BodyText">
       Summing currents
@@ -47,7 +47,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/lowPassC.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:First order low pass capacitor circuit</p>
       </div>
       <p class="BodyText">
       $$  I_{r1}=I_{c1}+I_{o}  $$
@@ -63,7 +63,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/lowPassL.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:First order low pass inductor circuit</p>
       </div>
       <p class="BodyText">
       $$  I_{r1}=I_{l1}+I_{o}  $$
@@ -79,7 +79,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/lowPassCL.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Second order low pass LC circuit</p>
       </div>
       <p class="BodyText">
         $$  I_{l1}=I_{c1}+I_{o}  $$
@@ -95,7 +95,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/highPassC.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:First order high pass capacitor circuit</p>
       </div>
       <p class="BodyText">
       $$  I_{c1}=I_{r1}+I_{o}  $$
@@ -111,7 +111,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/highPassL.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:First order high pass inductor circuit</p>
       </div>
       <p class="BodyText">
       $$  I_{r1}=I_{l1}+I_{o}  $$
@@ -127,7 +127,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/highPassCL.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Second order high pass LC circuit</p>
       </div>
       <p class="BodyText">
         $$  I_{c1}=I_{l1}+I_{o}  $$
@@ -143,7 +143,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/passiveCircuits/wheatstoneBridge.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Wheatstone bridge circuit</p>
       </div>
       <p class="BodyText">
       $$  v_+=v_i\frac{R_3}{R_3+R_1}  $$
@@ -156,7 +156,111 @@
       $$  \frac{v_o}{v_i}= \frac{R_1+\Delta R}{2R_1+\Delta R}-\frac{1}{2}=  \frac{\Delta R}{4R_1+2\Delta R} $$
 
       </p>
-  
+
+
+- title: "Active Circuits"
+  theHtml: 
+    <p class="BodyText">
+        A collection of key active circuits.
+    </p>
+  subcategories:
+  - title: "Simplified Hybrid-Pi"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/hybridPi.svg" class="include" >
+        <p class="caption">Figure 1:Simplified hybrid-pi equivalent NPN </p>
+      </div>
+      <p class="BodyText">
+      The  Hybrid-Pi circuit is the most common small signal transistor eqivalent circuit. The model assumes the transistor is correctly biased in the linear region and working with low frequency signals. When these assumptions are acceptable the hybrid-pi model is very accurate. For circuits where these assumptions cannot be made the full hybrid-pi model can be used. <br />
+      Transistors are often described as transconductance amplifiers, that is because for a voltage on the base \( v_{be}\) a current is generated through the collector \( i_c \). This gain is therefore \( g_m=\frac{i_c}{v_{be}}\). As the input resistance of the transistor is purely resistive in the model the transconductance can be described as a current gain aka for an input \( i_b \) the collector current is \( i_c \) this current gain is given the value \( \beta=\frac{i_c}{i_b}\). These equations can be seen in the hybrid-pi model on the current source.
+      </p>
+  - title: "Emitter follower"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/emitterFollower.svg" class="include" >
+        <p class="caption">Figure 1:Basic emitter follower circuit</p>
+      </div>
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/emitterFollowerHybridPi.svg" class="include" >
+        <p class="caption">Figure 2:Emitter follower equivaltent hybrid-pi circuit</p>
+      </div>
+      <p class="BodyText">
+      Voltage over \( R_e \)
+      $$  v_o=i_eR_e  $$
+      \( i_c=\beta i_b\)
+      $$  \therefore i_e=i_b+i_c=i_b(\beta+1)  $$
+      $$  v_o=(\beta+1)i_bR_e  $$
+      Summing \(v_e\) and \(v_{be}\) for \(v_i\)
+      $$  v_i=v_{be}+v_e=i_b R_\pi+(\beta+1)i_bR_e  $$
+      $$  \frac{v_o}{v_i}=\frac{(\beta+1)R_e}{R_\pi+(\beta+1)R_e}  $$
+      </p>
+  - title: "Common Emitter"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/commonEmitter.svg" class="include" >
+        <p class="caption">Figure 1:Basic common emitter circuit</p>
+      </div>
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/commonEmitterHybridPi.svg" class="include" >
+        <p class="caption">Figure 2:Common emitter equivalent hybrid-pi circuit</p>
+      </div>
+      <p class="BodyText">
+      For small signal analysis sources are shorted \(v_+=0\),looking at \(v_c\)
+      $$  v_o=-v_c=-i_cR_c  $$
+      $$  i_c=g_mv_{be}=g_mv_i  $$
+      $$  \therefore v_o=-g_mv_iR_c  $$
+      Rearranged
+      $$  \frac{v_o}{v_i}=-g_mR_c  $$
+      </p>
+  - title: "Common Emitter with Degeneration"
+    theHtml: 
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/commonEmitterDegeneration.svg" class="include" >
+        <p class="caption">Figure 1:Basic common emitter circuit with degeneration</p>
+      </div>
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/commonEmitterDegenerationHybridPi.svg" class="include" >
+        <p class="caption">Figure 2:Common emitter with degeneration equivalent hybrid-pi circuit</p>
+      </div>
+      <p class="BodyText">
+      For small signal analysis sources are shorted \(v_+=0\),looking at \(v_c\)
+      $$  v_o=-v_c=-i_cR_c  $$
+      $$  i_c=\beta i_b  $$
+      $$  v_o=-\beta i_bR_c  $$
+      Summing \(v_e\) and \(v_{be}\) for \(v_i\)
+      $$  v_i=v_e+v_{be}=i_eR_e+i_bR_\pi=i_b(\beta+1)R_e+i_bR_\pi=i_b((\beta+1)R_e+R_\pi)  $$
+      Subsituting and re=arranging
+      $$  \frac{v_o}{v_i}=- \frac{\beta R_c}{(\beta+1)R_e+R_\pi}  $$
+      </p>
+  - title: "Common Base"
+    theHtml: 
+      Common base circuits are generally used as a current buffer given the 1:1 input to output current.
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/commonBase.svg" class="include" >
+        <p class="caption">Figure 1:Basic common base circuit</p>
+      </div>
+      <div class="figure">
+        <img src="assets/svgs/activeCircuits/commonBaseHybridPi.svg" class="include" >
+        <p class="caption">Figure 2:Common base equivalent hybrid-pi circuit</p>
+      </div>
+      <p class="BodyText">
+      $$  v_{be}=-v_i  $$
+      For small signal analysis sources are shorted \(v_+=0\),looking at \(v_c\)
+      $$  v_o=-v_c=-i_cR_c  $$
+      $$  i_c=g_m(-v_i)  $$
+      Substituting
+      $$  v_o=g_mv_iR_c  $$
+      Rearranging 
+      $$  \frac{v_o}{v_i}=g_mR_c  $$
+      To derive the current characteristics instead look at an input of \(i_i\)
+      $$  i_{be}+i_i+i_c=0  $$
+      $$ \therefore  i_i=-i_b-i_c=0  $$
+      Where \(\beta i_b=i_c\)
+      $$ \therefore  i_b=-\frac{i_i}{\beta+1}  $$
+      $$ \therefore  i_c=i_b\beta=-\frac{i_i\beta}{\beta+1}\approx -i_i  $$
+      $$  \therefore \frac{i_c}{i_i}\approx-1  $$
+      Showing a current close to \(i_b\) out from \(i_c\)
+      </p>
 
 - title: "Opamp Circuits"
   theHtml: 
@@ -168,7 +272,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/opamp.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Ideal opamp symbol.</p>
       </div>
       <p class="BodyText">
         For an input of \( v_+ \) and \( v_- \) the output \( v_o \) is the difference between the inputs multiplied by an open loop gain \( A_v \), usually in the range of hundreds of thousands. This simplification can be represented as the equation below.
@@ -179,7 +283,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/voltageFollower.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp voltage follower</p>
       </div>
       <p class="BodyText">
           Given
@@ -197,7 +301,7 @@
     theHtml:
       <div class="figure">
         <img src="assets/svgs/opampCircuits/invertingAmplifier.svg" class="include" >
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp inverting amplifier</p>
       </div>
       <p class="BodyText">
           Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\).
@@ -216,7 +320,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/schmittTrigger.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp schmitt trigger</p>
       </div>
       <p class="BodyText">
           In a Schmitt Trigger the op-amp is setup in positive feedback meaning for an increase in voltage at \( v_+ \) will increase \( v_o \) and visa versa and therefore \( v_+ \) leading to a system always in saturation.
@@ -239,7 +343,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/complexInvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp complex inverting amplifier</p>
       </div>
       <p class="BodyText">
           Similar to a typical inverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
@@ -259,7 +363,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/noninvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp non-inverting amplifier</p>
       </div>
       <p class="BodyText">
           Assuming no current into the opamp
@@ -278,7 +382,7 @@
     theHtml: 
       <div class="figure">
           <img src="assets/svgs/opampCircuits/complexNoninvertingAmplifier.svg" class="include">
-          <p class="caption">Figure 1:</p>
+          <p class="caption">Figure 1:Opamp complex non-inverting amplifier</p>
       </div>
       <p class="BodyText">
           Similar to a typical noninverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br />
@@ -298,7 +402,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/integrator.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp integrator</p>
       </div>
       <p class="BodyText">
           It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
@@ -315,7 +419,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/differentiator.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp differentiator</p>
       </div>
       <p class="BodyText">
           It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here.
@@ -332,7 +436,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/summingInvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp summing inverting amplifier</p>
       </div>
       <p class="BodyText">
           Assuming no current into the opamp
@@ -349,7 +453,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/summingNoninvertingAmplifier.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp summing non-inverting amplifier</p>
       </div>
       <p class="BodyText">
           Assuming no current into the opamp
@@ -369,7 +473,7 @@
     theHtml: 
       <div class="figure">
         <img src="assets/svgs/opampCircuits/differentialAmplifier.svg" class="include">
-        <p class="caption">Figure 1:</p>
+        <p class="caption">Figure 1:Opamp differential amplifier</p>
       </div>
       <p class="BodyText">
           Looking at \( v_- \) and assuming no current into the opamp.

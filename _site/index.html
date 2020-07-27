@@ -60,44 +60,64 @@
     
 
     
-    <div class="contentsSection">2 Opamp Circuits</div>
+    <div class="contentsSection">2 Active Circuits</div>
     
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#Opamp">2.1 Opamp</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#SimplifiedHybrid-Pi">2.1 Simplified Hybrid-Pi</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#VoltageFollower">2.2 Voltage Follower</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#Emitterfollower">2.2 Emitter follower</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#InvertingAmplifier">2.3 Inverting Amplifier</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#CommonEmitter">2.3 Common Emitter</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#SchmittTrigger">2.4 Schmitt Trigger</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#CommonEmitterwithDegeneration">2.4 Common Emitter with Degeneration</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#ComplexInvertingAmplifier">2.5 Complex Inverting Amplifier</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#CommonBase">2.5 Common Base</a></div>
+    
+
+    
+    <div class="contentsSection">3 Opamp Circuits</div>
+    
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#NoninvertingAmplifier">2.6 Noninverting Amplifier</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#Opamp">3.1 Opamp</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#ComplexNoninvertingAmplifier">2.7 Complex Noninverting Amplifier</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#VoltageFollower">3.2 Voltage Follower</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#Integrator">2.8 Integrator</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#InvertingAmplifier">3.3 Inverting Amplifier</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#Differentiator">2.9 Differentiator</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#SchmittTrigger">3.4 Schmitt Trigger</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#SummingInvertingAmplifier">2.10 Summing Inverting Amplifier</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#ComplexInvertingAmplifier">3.5 Complex Inverting Amplifier</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#SummingNon-InvertingAmplifier">2.11 Summing Non-Inverting Amplifier</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#NoninvertingAmplifier">3.6 Noninverting Amplifier</a></div>
     
         
-        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#DifferentialAmplifier">2.12 Differential Amplifier</a></div>
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#ComplexNoninvertingAmplifier">3.7 Complex Noninverting Amplifier</a></div>
+    
+        
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#Integrator">3.8 Integrator</a></div>
+    
+        
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#Differentiator">3.9 Differentiator</a></div>
+    
+        
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#SummingInvertingAmplifier">3.10 Summing Inverting Amplifier</a></div>
+    
+        
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#SummingNon-InvertingAmplifier">3.11 Summing Non-Inverting Amplifier</a></div>
+    
+        
+        <div class="contentsSubSection"><a class="contentsSubSectionText" href="#DifferentialAmplifier">3.12 Differential Amplifier</a></div>
     
 
         
@@ -121,7 +141,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/potentialDivider.svg" class="include" > <p class="caption">Figure 1:</p> </div> <p class="BodyText"> Summing currents $$  I_{r1}=I_{r2}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{R_2}+I_o  $$ Rearrange for $$  v_o=\frac{R_2v_i-I_oR_1R_2}{R_1+R_2} $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{R_2}{R_1+R_2}  $$ This derevation is common place and usually assumed in many calculations. </p> 
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/potentialDivider.svg" class="include" > <p class="caption">Figure 1:Simple potential divider circuit</p> </div> <p class="BodyText"> Summing currents $$  I_{r1}=I_{r2}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{R_2}+I_o  $$ Rearrange for $$  v_o=\frac{R_2v_i-I_oR_1R_2}{R_1+R_2} $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{R_2}{R_1+R_2}  $$ This derevation is common place and usually assumed in many calculations. </p> 
 
             
 
@@ -145,7 +165,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/lowPassC.svg" class="include" > <p class="caption">Figure 2:</p> </div> <p class="BodyText"> $$  I_{r1}=I_{c1}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{\frac{1}{j\omega C_1}}+I_o  $$ Rearrange for $$  v_o=\frac{v_i-I_oR_1}{1+j\omega C_1R_1}  $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{1}{1+j\omega C_1R_1}  $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=1\frac{1}{1+j\frac{\omega }{\frac{1}{C_1R_1}}}  $$ </p> 
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/lowPassC.svg" class="include" > <p class="caption">Figure 2:First order low pass capacitor circuit</p> </div> <p class="BodyText"> $$  I_{r1}=I_{c1}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{\frac{1}{j\omega C_1}}+I_o  $$ Rearrange for $$  v_o=\frac{v_i-I_oR_1}{1+j\omega C_1R_1}  $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{1}{1+j\omega C_1R_1}  $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=1\frac{1}{1+j\frac{\omega }{\frac{1}{C_1R_1}}}  $$ </p> 
 
             
 
@@ -155,7 +175,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/lowPassL.svg" class="include" > <p class="caption">Figure 3:</p> </div> <p class="BodyText"> $$  I_{r1}=I_{l1}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{j\omega L_1}+I_o  $$ Rearrange for $$  v_o=\frac{v_ij\omega L_1-I_oR_1j\omega L_1}{R_1+j\omega L_1 } $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1+j\omega L_1 } $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1}\frac{1}{1+j\frac{\omega}{\frac{R_1}{L_1}} } $$ </p> 
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/lowPassL.svg" class="include" > <p class="caption">Figure 3:First order low pass inductor circuit</p> </div> <p class="BodyText"> $$  I_{r1}=I_{l1}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{j\omega L_1}+I_o  $$ Rearrange for $$  v_o=\frac{v_ij\omega L_1-I_oR_1j\omega L_1}{R_1+j\omega L_1 } $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1+j\omega L_1 } $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1}\frac{1}{1+j\frac{\omega}{\frac{R_1}{L_1}} } $$ </p> 
 
             
 
@@ -165,7 +185,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/lowPassCL.svg" class="include" > <p class="caption">Figure 4:</p> </div> <p class="BodyText"> $$  I_{l1}=I_{c1}+I_{o}  $$ $$  \frac{v_i-v_o}{j\omega L_1}=\frac{v_o}{\frac{1}{j\omega C_1}}+I_o  $$ Rearrange for $$  v_o=\frac{v_i-I_oj\omega L_1}{1-\omega^2 C_1L_1}  $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{1}{1-\omega^2 C_1L_1}  $$ Convert into second-order Standard form $$  \frac{v_o}{v_i} = 1\frac{1}{1-\frac{\omega^2}{\frac{1}{C_1L_1}} } $$ </p> 
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/lowPassCL.svg" class="include" > <p class="caption">Figure 4:Second order low pass LC circuit</p> </div> <p class="BodyText"> $$  I_{l1}=I_{c1}+I_{o}  $$ $$  \frac{v_i-v_o}{j\omega L_1}=\frac{v_o}{\frac{1}{j\omega C_1}}+I_o  $$ Rearrange for $$  v_o=\frac{v_i-I_oj\omega L_1}{1-\omega^2 C_1L_1}  $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{1}{1-\omega^2 C_1L_1}  $$ Convert into second-order Standard form $$  \frac{v_o}{v_i} = 1\frac{1}{1-\frac{\omega^2}{\frac{1}{C_1L_1}} } $$ </p> 
 
             
 
@@ -175,7 +195,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/highPassC.svg" class="include" > <p class="caption">Figure 5:</p> </div> <p class="BodyText"> $$  I_{c1}=I_{r1}+I_{o}  $$ $$  \frac{v_i-v_o}{\frac{1}{j\omega C_1}}=\frac{v_o}{R_1}+I_o  $$ Rearrange for $$  v_o=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$ Assuming \(I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=1\frac{j\frac{\omega}{\frac{1}{C_1R_1}} }{1+j\frac{\omega}{\frac{1}{C_1R_1}}}  $$ </p> 
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/highPassC.svg" class="include" > <p class="caption">Figure 5:First order high pass capacitor circuit</p> </div> <p class="BodyText"> $$  I_{c1}=I_{r1}+I_{o}  $$ $$  \frac{v_i-v_o}{\frac{1}{j\omega C_1}}=\frac{v_o}{R_1}+I_o  $$ Rearrange for $$  v_o=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$ Assuming \(I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=1\frac{j\frac{\omega}{\frac{1}{C_1R_1}} }{1+j\frac{\omega}{\frac{1}{C_1R_1}}}  $$ </p> 
 
             
 
@@ -185,7 +205,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/highPassL.svg" class="include" > <p class="caption">Figure 6:</p> </div> <p class="BodyText"> $$  I_{r1}=I_{l1}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{j\omega L_1}+I_o  $$ Rearrange for $$  v_o=\frac{v_ij\omega L_1-jI_oR_1\omega L_1}{R_1+j\omega L_1}  $$ Assuming \(I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1+j\omega L_1}  $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=1\frac{j\frac{\omega}{\frac{R_1}{L_1}} }{1+j\frac{\omega}{\frac{R_1}{L_1}}}  $$ </p> 
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/highPassL.svg" class="include" > <p class="caption">Figure 6:First order high pass inductor circuit</p> </div> <p class="BodyText"> $$  I_{r1}=I_{l1}+I_{o}  $$ $$  \frac{v_i-v_o}{R_1}=\frac{v_o}{j\omega L_1}+I_o  $$ Rearrange for $$  v_o=\frac{v_ij\omega L_1-jI_oR_1\omega L_1}{R_1+j\omega L_1}  $$ Assuming \(I_o\) is negligible $$  \frac{v_o}{v_i}=\frac{j\omega L_1}{R_1+j\omega L_1}  $$ Convert into first-order Standard form $$  \frac{v_o}{v_i}=1\frac{j\frac{\omega}{\frac{R_1}{L_1}} }{1+j\frac{\omega}{\frac{R_1}{L_1}}}  $$ </p> 
 
             
 
@@ -195,7 +215,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/highPassCL.svg" class="include" > <p class="caption">Figure 7:</p> </div> <p class="BodyText"> $$  I_{c1}=I_{l1}+I_{o}  $$ $$  \frac{v_i-v_o}{\frac{1}{j\omega C_1}}=\frac{v_o}{j\omega L_1}+I_o  $$ Rearrange for $$  v_o=-\frac{v_i\omega^2 C_1 L_1+I_oj\omega L_1}{1-\omega^2 C_1 L_1}  $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=-\frac{\omega^2 C_1 L_1}{1-\omega^2 C_1 L_1}  $$ Convert into second-order Standard form $$  \frac{v_o}{v_i}=1\frac{-\frac{\omega^2}{\frac{1}{C_1 L_1}} }{1-\frac{\omega^2}{\frac{1}{C_1 L_1}}}  $$ </p> 
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/highPassCL.svg" class="include" > <p class="caption">Figure 7:Second order high pass LC circuit</p> </div> <p class="BodyText"> $$  I_{c1}=I_{l1}+I_{o}  $$ $$  \frac{v_i-v_o}{\frac{1}{j\omega C_1}}=\frac{v_o}{j\omega L_1}+I_o  $$ Rearrange for $$  v_o=-\frac{v_i\omega^2 C_1 L_1+I_oj\omega L_1}{1-\omega^2 C_1 L_1}  $$ Assuming \( I_o\) is negligible $$  \frac{v_o}{v_i}=-\frac{\omega^2 C_1 L_1}{1-\omega^2 C_1 L_1}  $$ Convert into second-order Standard form $$  \frac{v_o}{v_i}=1\frac{-\frac{\omega^2}{\frac{1}{C_1 L_1}} }{1-\frac{\omega^2}{\frac{1}{C_1 L_1}}}  $$ </p> 
 
             
 
@@ -205,7 +225,7 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/passiveCircuits/wheatstoneBridge.svg" class="include" > <p class="caption">Figure 8:</p> </div> <p class="BodyText"> $$  v_+=v_i\frac{R_3}{R_3+R_1}  $$ $$  v_-=v_i\frac{R_4}{R_4+R_2}  $$ $$  v_o=v_+-v_-=v_i(\frac{R_3}{R_3+R_1}-\frac{R_4}{R_4+R_2} ) $$ $$  \frac{v_o}{v_i}= \frac{R_3}{R_3+R_1}-\frac{R_4}{R_4+R_2} $$ If \(R_3=R_1\) and \(R_4=R_2\) $$  \frac{v_o}{v_i}= \frac{R_1}{2R_1}-\frac{R_2}{2R_2}=0 $$ If \(R_3=R_1+\Delta R\) and \(R_4=R_2\) $$  \frac{v_o}{v_i}= \frac{R_1+\Delta R}{2R_1+\Delta R}-\frac{1}{2}=  \frac{\Delta R}{4R_1+2\Delta R} $$
+            <div class="figure"> <img src="assets/svgs/passiveCircuits/wheatstoneBridge.svg" class="include" > <p class="caption">Figure 8:Wheatstone bridge circuit</p> </div> <p class="BodyText"> $$  v_+=v_i\frac{R_3}{R_3+R_1}  $$ $$  v_-=v_i\frac{R_4}{R_4+R_2}  $$ $$  v_o=v_+-v_-=v_i(\frac{R_3}{R_3+R_1}-\frac{R_4}{R_4+R_2} ) $$ $$  \frac{v_o}{v_i}= \frac{R_3}{R_3+R_1}-\frac{R_4}{R_4+R_2} $$ If \(R_3=R_1\) and \(R_4=R_2\) $$  \frac{v_o}{v_i}= \frac{R_1}{2R_1}-\frac{R_2}{2R_2}=0 $$ If \(R_3=R_1+\Delta R\) and \(R_4=R_2\) $$  \frac{v_o}{v_i}= \frac{R_1+\Delta R}{2R_1+\Delta R}-\frac{1}{2}=  \frac{\Delta R}{4R_1+2\Delta R} $$
 </p> 
 
             
@@ -213,42 +233,22 @@
     
 
 
-    <p class="Section">2 &ensp; Opamp Circuits</p>
-    <p class="BodyText"> A collection of key opamp circuits. </p>
+    <p class="Section">2 &ensp; Active Circuits</p>
+    <p class="BodyText"> A collection of key active circuits. </p>
     
     
         
-        <a class="SubSection" name="Opamp">2.1 &ensp; Opamp</a>
+        <a class="SubSection" name="SimplifiedHybrid-Pi">2.1 &ensp; Simplified Hybrid-Pi</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/opamp.svg" class="include" > <p class="caption">Figure 9:</p> </div> <p class="BodyText"> For an input of \( v_+ \) and \( v_- \) the output \( v_o \) is the difference between the inputs multiplied by an open loop gain \( A_v \), usually in the range of hundreds of thousands. This simplification can be represented as the equation below. $$ v_o=A_v(v_+-v_-)$$ Opamp calculations commonly assume  \( A_v=\infty \) which, when in negative feedback leads to the assumption \( v_-=v_+ \). It is also commonly assumed opamps take no current on the input, like all assumptions this is valid until this current draw effects the voltage at the input. </p> 
-
-            
-
-    
-        
-        <a class="SubSection" name="VoltageFollower">2.2 &ensp; Voltage Follower</a>
-            
-            
-            
-            <div class="figure"> <img src="assets/svgs/opampCircuits/voltageFollower.svg" class="include" > <p class="caption">Figure 10:</p> </div> <p class="BodyText"> Given $$ v_o=A_v(v_+-v_-)$$ $$ v_- = v_o $$ $$ v_+ = v_i $$ Subsitute in $$ \therefore v_o=A_v(v_i-v_o)$$ Rearrange for $$ \frac{v_o}{v_i}=\frac{A_v}{A_v+1} $$ Assuming \( A_v >> 1 \) $$ \frac{v_o}{v_i}=1 $$ </p> 
+            <div class="figure"> <img src="assets/svgs/activeCircuits/hybridPi.svg" class="include" > <p class="caption">Figure 9:Simplified hybrid-pi equivalent NPN </p> </div> <p class="BodyText"> The  Hybrid-Pi circuit is the most common small signal transistor eqivalent circuit. The model assumes the transistor is correctly biased in the linear region and working with low frequency signals. When these assumptions are acceptable the hybrid-pi model is very accurate. For circuits where these assumptions cannot be made the full hybrid-pi model can be used. <br /> Transistors are often described as transconductance amplifiers, that is because for a voltage on the base \( v_{be}\) a current is generated through the collector \( i_c \). This gain is therefore \( g_m=\frac{i_c}{v_{be}}\). As the input resistance of the transistor is purely resistive in the model the transconductance can be described as a current gain aka for an input \( i_b \) the collector current is \( i_c \) this current gain is given the value \( \beta=\frac{i_c}{i_b}\). These equations can be seen in the hybrid-pi model on the current source. </p> 
 
             
 
     
         
-        <a class="SubSection" name="InvertingAmplifier">2.3 &ensp; Inverting Amplifier</a>
-            
-            
-            
-            <div class="figure"> <img src="assets/svgs/opampCircuits/invertingAmplifier.svg" class="include" > <p class="caption">Figure 11:</p> </div> <p class="BodyText"> Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\). $$ v_o=-A_vv_- $$ Assuming no current into the opamp and treating \( R_1 \) and \( R_2 \) as a potential divider. $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=v_- $$ Subsituting for $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=-\frac{v_o}{A_v} $$ $$ v_o(\frac{R_1}{R_1+R_2}+\frac{1}{A_v})=v_i(\frac{R_1}{R_1+R_2}-1) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{\frac{R_1}{R_1+R_2}-1}{\frac{R_1}{R_1+R_2}+\frac{1}{A_v}} = \frac{-R_2}{R_1+\frac{R_1+R_2}{A_v}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=-\frac{R_2}{R_1} $$ </p> 
-
-            
-
-    
-        
-        <a class="SubSection" name="SchmittTrigger">2.4 &ensp; Schmitt Trigger</a>
+        <a class="SubSection" name="Emitterfollower">2.2 &ensp; Emitter follower</a>
             
             
             
@@ -257,88 +257,188 @@
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/schmittTrigger.svg" class="include"> <p class="caption">Figure 12:</p> </div> <p class="BodyText"> In a Schmitt Trigger the op-amp is setup in positive feedback meaning for an increase in voltage at \( v_+ \) will increase \( v_o \) and visa versa and therefore \( v_+ \) leading to a system always in saturation. Assuming \(v_o\) is currently saturated to the positive rail \(v_o=v_s\) and treating \( R_1 \) and \( R_2 \) as a potential divider. $$ v_+=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$ To stop the system being in positive saturation \( v_+<=0 \) Substituting in for $$ 0=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$ Rearranging for $$ v_i=-v_s\frac{R_1}{R_2}$$ This can be proven in the other direction similarly giving $$ v_i=v_s\frac{R_1}{R_2}$$ Giving a direction based resonse as seen below. </p> <div class="figure"> <img src="assets/svgs/opampCircuits/schmittTriggerDiagram.svg" class="include"> <p class="caption">Figure 13:Schmitt Trigger response</p> </div>
+            <div class="figure"> <img src="assets/svgs/activeCircuits/emitterFollower.svg" class="include" > <p class="caption">Figure 10:Basic emitter follower circuit</p> </div> <div class="figure"> <img src="assets/svgs/activeCircuits/emitterFollowerHybridPi.svg" class="include" > <p class="caption">Figure 11:Emitter follower equivaltent hybrid-pi circuit</p> </div> <p class="BodyText"> Voltage over \( R_e \) $$  v_o=i_eR_e  $$ \( i_c=\beta i_b\) $$  \therefore i_e=i_b+i_c=i_b(\beta+1)  $$ $$  v_o=(\beta+1)i_bR_e  $$ Summing \(v_e\) and \(v_{be}\) for \(v_i\) $$  v_i=v_{be}+v_e=i_b R_\pi+(\beta+1)i_bR_e  $$ $$  \frac{v_o}{v_i}=\frac{(\beta+1)R_e}{R_\pi+(\beta+1)R_e}  $$ </p>
 
 
             
 
     
         
-        <a class="SubSection" name="ComplexInvertingAmplifier">2.5 &ensp; Complex Inverting Amplifier</a>
+        <a class="SubSection" name="CommonEmitter">2.3 &ensp; Common Emitter</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/complexInvertingAmplifier.svg" class="include"> <p class="caption">Figure 14:</p> </div> <p class="BodyText"> Similar to a typical inverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br /> Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\). $$ v_o=-A_vv_- $$ Assuming no current into the opamp and treating \( z_1 \) and \( z_2 \) as a complex potential divider. $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=v_- $$ Subsituting for $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=-\frac{v_o}{A_v} $$ $$ v_o(\frac{z_1}{z_1+z_2}+\frac{1}{A_v})=v_i(\frac{z_1}{z_1+z_2}-1) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{\frac{z_1}{z_1+z_2}-1}{\frac{z_1}{z_1+z_2}+\frac{1}{A_v}} = \frac{-z_2}{z_1+\frac{z_1+z_2}{A_v}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=-\frac{z_2}{z_1} $$ </p> 
+             
+            
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/activeCircuits/commonEmitter.svg" class="include" > <p class="caption">Figure 12:Basic common emitter circuit</p> </div> <div class="figure"> <img src="assets/svgs/activeCircuits/commonEmitterHybridPi.svg" class="include" > <p class="caption">Figure 13:Common emitter equivalent hybrid-pi circuit</p> </div> <p class="BodyText"> For small signal analysis sources are shorted \(v_+=0\),looking at \(v_c\) $$  v_o=-v_c=-i_cR_c  $$ $$  i_c=g_mv_{be}=g_mv_i  $$ $$  \therefore v_o=-g_mv_iR_c  $$ Rearranged $$  \frac{v_o}{v_i}=-g_mR_c  $$ </p>
+
 
             
 
     
         
-        <a class="SubSection" name="NoninvertingAmplifier">2.6 &ensp; Noninverting Amplifier</a>
+        <a class="SubSection" name="CommonEmitterwithDegeneration">2.4 &ensp; Common Emitter with Degeneration</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/noninvertingAmplifier.svg" class="include"> <p class="caption">Figure 15:</p> </div> <p class="BodyText"> Assuming no current into the opamp $$  i_1=i_2 $$ $$ \therefore v_-=v_o\frac{R_2}{R_1+R_2} $$ Given $$ v_o=A_v(v_+-v_-) $$ Substituing in for $$ v_o=A_v(v_i-v_o\frac{R_2}{R_1+R_2}) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{R_2}{R_1+R_2}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=1+\frac{R_1}{R_2} $$ </p> 
+             
+            
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/activeCircuits/commonEmitterDegeneration.svg" class="include" > <p class="caption">Figure 14:Basic common emitter circuit with degeneration</p> </div> <div class="figure"> <img src="assets/svgs/activeCircuits/commonEmitterDegenerationHybridPi.svg" class="include" > <p class="caption">Figure 15:Common emitter with degeneration equivalent hybrid-pi circuit</p> </div> <p class="BodyText"> For small signal analysis sources are shorted \(v_+=0\),looking at \(v_c\) $$  v_o=-v_c=-i_cR_c  $$ $$  i_c=\beta i_b  $$ $$  v_o=-\beta i_bR_c  $$ Summing \(v_e\) and \(v_{be}\) for \(v_i\) $$  v_i=v_e+v_{be}=i_eR_e+i_bR_\pi=i_b(\beta+1)R_e+i_bR_\pi=i_b((\beta+1)R_e+R_\pi)  $$ Subsituting and re=arranging $$  \frac{v_o}{v_i}=- \frac{\beta R_c}{(\beta+1)R_e+R_\pi}  $$ </p>
+
 
             
 
     
         
-        <a class="SubSection" name="ComplexNoninvertingAmplifier">2.7 &ensp; Complex Noninverting Amplifier</a>
+        <a class="SubSection" name="CommonBase">2.5 &ensp; Common Base</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/complexNoninvertingAmplifier.svg" class="include"> <p class="caption">Figure 16:</p> </div> <p class="BodyText"> Similar to a typical noninverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br /> Assuming no current into the opamp $$  i_1=i_2 $$ $$ \therefore v_-=v_o\frac{z_2}{z_1+z_2} $$ Given $$ v_o=A_v(v_+-v_-) $$ Substituing in for $$ v_o=A_v(v_i-v_o\frac{z_2}{z_1+z_2}) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{z_2}{z_1+z_2}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=1+\frac{z_1}{z_2} $$ </p> 
+             
+            
+            
+            
+            
+            Common base circuits are generally used as a current buffer given the 1:1 input to output current. <div class="figure"> <img src="assets/svgs/activeCircuits/commonBase.svg" class="include" > <p class="caption">Figure 16:Basic common base circuit</p> </div> <div class="figure"> <img src="assets/svgs/activeCircuits/commonBaseHybridPi.svg" class="include" > <p class="caption">Figure 17:Common base equivalent hybrid-pi circuit</p> </div> <p class="BodyText"> $$  v_{be}=-v_i  $$ For small signal analysis sources are shorted \(v_+=0\),looking at \(v_c\) $$  v_o=-v_c=-i_cR_c  $$ $$  i_c=g_m(-v_i)  $$ Substituting $$  v_o=g_mv_iR_c  $$ Rearranging $$  \frac{v_o}{v_i}=g_mR_c  $$ To derive the current characteristics instead look at an input of \(i_i\) $$  i_{be}+i_i+i_c=0  $$ $$ \therefore  i_i=-i_b-i_c=0  $$ Where \(\beta i_b=i_c\) $$ \therefore  i_b=-\frac{i_i}{\beta+1}  $$ $$ \therefore  i_c=i_b\beta=-\frac{i_i\beta}{\beta+1}\approx -i_i  $$ $$  \therefore \frac{i_c}{i_i}\approx-1  $$ Showing a current close to \(i_b\) out from \(i_c\) </p>
+
+
+            
+
+    
+
+
+    <p class="Section">3 &ensp; Opamp Circuits</p>
+    <p class="BodyText"> A collection of key opamp circuits. </p>
+    
+    
+        
+        <a class="SubSection" name="Opamp">3.1 &ensp; Opamp</a>
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/opamp.svg" class="include" > <p class="caption">Figure 18:Ideal opamp symbol.</p> </div> <p class="BodyText"> For an input of \( v_+ \) and \( v_- \) the output \( v_o \) is the difference between the inputs multiplied by an open loop gain \( A_v \), usually in the range of hundreds of thousands. This simplification can be represented as the equation below. $$ v_o=A_v(v_+-v_-)$$ Opamp calculations commonly assume  \( A_v=\infty \) which, when in negative feedback leads to the assumption \( v_-=v_+ \). It is also commonly assumed opamps take no current on the input, like all assumptions this is valid until this current draw effects the voltage at the input. </p> 
 
             
 
     
         
-        <a class="SubSection" name="Integrator">2.8 &ensp; Integrator</a>
+        <a class="SubSection" name="VoltageFollower">3.2 &ensp; Voltage Follower</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/integrator.svg" class="include"> <p class="caption">Figure 17:</p> </div> <p class="BodyText"> It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here. Assuming no current into the opamp $$  i_r+i_c=0  $$ Using \( I=C\frac{dv}{dt} \) $$  I_c=C_1\frac{dv_o-dv_-}{dt}=-\frac{v_i-v_-}{R_1}  $$ Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \) $$  C_1\frac{dv_o}{dt}=-\frac{v_i}{R_1}  $$ Integrate for 0 to t where the opamp never saturates and \( R_1\) and \( C_1\) are constant $$ v_o=-\frac{1}{R_1C_1}\int_0^t v_i \,dt $$ </p> 
+            <div class="figure"> <img src="assets/svgs/opampCircuits/voltageFollower.svg" class="include" > <p class="caption">Figure 19:Opamp voltage follower</p> </div> <p class="BodyText"> Given $$ v_o=A_v(v_+-v_-)$$ $$ v_- = v_o $$ $$ v_+ = v_i $$ Subsitute in $$ \therefore v_o=A_v(v_i-v_o)$$ Rearrange for $$ \frac{v_o}{v_i}=\frac{A_v}{A_v+1} $$ Assuming \( A_v >> 1 \) $$ \frac{v_o}{v_i}=1 $$ </p> 
 
             
 
     
         
-        <a class="SubSection" name="Differentiator">2.9 &ensp; Differentiator</a>
+        <a class="SubSection" name="InvertingAmplifier">3.3 &ensp; Inverting Amplifier</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/differentiator.svg" class="include"> <p class="caption">Figure 18:</p> </div> <p class="BodyText"> It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here. Assuming no current into the opamp $$  i_r+i_c=0  $$ Using \( I=C\frac{dv}{dt} \) $$  I_c=C_1\frac{dv_i-dv_-}{dt}=-\frac{v_o-v_-}{R_1}  $$ Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \) $$  C_1\frac{dv_i}{dt}=-\frac{v_o}{R_1}  $$ Rearrange for $$ v_o=-R_1C_1\frac{ dv_i}{dt} $$ </p> 
+            <div class="figure"> <img src="assets/svgs/opampCircuits/invertingAmplifier.svg" class="include" > <p class="caption">Figure 20:Opamp inverting amplifier</p> </div> <p class="BodyText"> Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\). $$ v_o=-A_vv_- $$ Assuming no current into the opamp and treating \( R_1 \) and \( R_2 \) as a potential divider. $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=v_- $$ Subsituting for $$ (v_o-v_i)\frac{R_1}{R_1+R_2}+v_i=-\frac{v_o}{A_v} $$ $$ v_o(\frac{R_1}{R_1+R_2}+\frac{1}{A_v})=v_i(\frac{R_1}{R_1+R_2}-1) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{\frac{R_1}{R_1+R_2}-1}{\frac{R_1}{R_1+R_2}+\frac{1}{A_v}} = \frac{-R_2}{R_1+\frac{R_1+R_2}{A_v}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=-\frac{R_2}{R_1} $$ </p> 
 
             
 
     
         
-        <a class="SubSection" name="SummingInvertingAmplifier">2.10 &ensp; Summing Inverting Amplifier</a>
+        <a class="SubSection" name="SchmittTrigger">3.4 &ensp; Schmitt Trigger</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/summingInvertingAmplifier.svg" class="include"> <p class="caption">Figure 19:</p> </div> <p class="BodyText"> Assuming no current into the opamp $$  i_1+i_2+i_3=-i_4  $$ $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{i2}-v_-}{R_2}+\frac{v_{i3}-v_-}{R_3}=-\frac{v_o-v_-}{R_4} $$ $$  \frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4+v_{o}R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}=v_- $$ $$  v_o=\frac{-A_v\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}{1+A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}  $$ Assuming \( A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}>>1 \) $$  v_o=-\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_1R_2R_3}  $$ if \( R_1=R_2=R_3=R_i\) $$  v_o=-\frac{R_4}{R_i}(v_{i1}+v_{i3}+v_{i3})  $$ </p> 
+             
+            
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/schmittTrigger.svg" class="include"> <p class="caption">Figure 21:Opamp schmitt trigger</p> </div> <p class="BodyText"> In a Schmitt Trigger the op-amp is setup in positive feedback meaning for an increase in voltage at \( v_+ \) will increase \( v_o \) and visa versa and therefore \( v_+ \) leading to a system always in saturation. Assuming \(v_o\) is currently saturated to the positive rail \(v_o=v_s\) and treating \( R_1 \) and \( R_2 \) as a potential divider. $$ v_+=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$ To stop the system being in positive saturation \( v_+<=0 \) Substituting in for $$ 0=(v_s-v_i)\frac{R_1}{R_1+R_2}+v_i $$ Rearranging for $$ v_i=-v_s\frac{R_1}{R_2}$$ This can be proven in the other direction similarly giving $$ v_i=v_s\frac{R_1}{R_2}$$ Giving a direction based resonse as seen below. </p> <div class="figure"> <img src="assets/svgs/opampCircuits/schmittTriggerDiagram.svg" class="include"> <p class="caption">Figure 22:Schmitt Trigger response</p> </div>
+
 
             
 
     
         
-        <a class="SubSection" name="SummingNon-InvertingAmplifier">2.11 &ensp; Summing Non-Inverting Amplifier</a>
+        <a class="SubSection" name="ComplexInvertingAmplifier">3.5 &ensp; Complex Inverting Amplifier</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/summingNoninvertingAmplifier.svg" class="include"> <p class="caption">Figure 20:</p> </div> <p class="BodyText"> Assuming no current into the opamp $$  i_1+i_2+i_3=0  $$ $$  \frac{v_{i1}-v_+}{R_1}+\frac{v_{i2}-v_+}{R_2}+\frac{v_{i3}-v_+}{R_3}=0 $$ if \( R_1=R_2=R_3=R_i\) $$  \frac{v_{i1}+v_{i2}+v_{i3}}{3}=v_{+} $$ looking at \( v_-\) and assuming no current into the opamp $$  v_-=v_o\frac{R_5}{R_4+R_5}  $$ Subsitute into \( v_o=A_v(v_+-v_-)\) $$  v_o=A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3}-v_o\frac{R_5}{R_4+R_5})  $$ $$  v_o=\frac{A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3})}{(1+A_v\frac{R_5}{R_4+R_5})}  $$ Assuming \( A_v\frac{R_5}{R_4+R_5}>>1 \) $$  v_o=\frac{R_4+R_5}{R_5}(\frac{v_{i1}+v_{i2}+v_{i3}}{3})  $$ </p> 
+            <div class="figure"> <img src="assets/svgs/opampCircuits/complexInvertingAmplifier.svg" class="include"> <p class="caption">Figure 23:Opamp complex inverting amplifier</p> </div> <p class="BodyText"> Similar to a typical inverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br /> Given \( v_+=0 \) and \( v_o=A_v(v_+-v_-)\). $$ v_o=-A_vv_- $$ Assuming no current into the opamp and treating \( z_1 \) and \( z_2 \) as a complex potential divider. $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=v_- $$ Subsituting for $$ (v_o-v_i)\frac{z_1}{z_1+z_2}+v_i=-\frac{v_o}{A_v} $$ $$ v_o(\frac{z_1}{z_1+z_2}+\frac{1}{A_v})=v_i(\frac{z_1}{z_1+z_2}-1) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{\frac{z_1}{z_1+z_2}-1}{\frac{z_1}{z_1+z_2}+\frac{1}{A_v}} = \frac{-z_2}{z_1+\frac{z_1+z_2}{A_v}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=-\frac{z_2}{z_1} $$ </p> 
 
             
 
     
         
-        <a class="SubSection" name="DifferentialAmplifier">2.12 &ensp; Differential Amplifier</a>
+        <a class="SubSection" name="NoninvertingAmplifier">3.6 &ensp; Noninverting Amplifier</a>
             
             
             
-            <div class="figure"> <img src="assets/svgs/opampCircuits/differentialAmplifier.svg" class="include"> <p class="caption">Figure 21:</p> </div> <p class="BodyText"> Looking at \( v_- \) and assuming no current into the opamp. $$  i_1+i_2=0  $$ $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{o}-v_-}{R_2}=0  $$ $$  R_2v_{i1}+R_1v_{o}=v_-(R_1+R_2)  $$ $$  \frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2}=v_-  $$ Looking at \( v_+ \) and assuming no current into the opamp. $$  v_+=v_{i2}\frac{R_4}{R_3+R_4}  $$ Subsitute into \( v_o=A_v(v_+-v_-)\) $$  v_o=A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2})  $$ $$  v_o=\frac{A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2})}{1+\frac{A_vR_1}{R_1+R_2}}  $$ Assuming \( \frac{A_vR_1}{(R_1+R_2)}>>1 \) $$  v_o=\frac{v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2}}{\frac{R_1}{R_1+R_2}}  $$ $$  v_o=v_{i2}\frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}-\frac{R_2v_{i1}}{R_1}  $$ if \( R_1=R_3 \)  and \( R_2=R_4 \) $$  v_o=\frac{R_2}{R_1}(v_{i2}-v_{i1})  $$ </p> 
+            <div class="figure"> <img src="assets/svgs/opampCircuits/noninvertingAmplifier.svg" class="include"> <p class="caption">Figure 24:Opamp non-inverting amplifier</p> </div> <p class="BodyText"> Assuming no current into the opamp $$  i_1=i_2 $$ $$ \therefore v_-=v_o\frac{R_2}{R_1+R_2} $$ Given $$ v_o=A_v(v_+-v_-) $$ Substituing in for $$ v_o=A_v(v_i-v_o\frac{R_2}{R_1+R_2}) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{R_2}{R_1+R_2}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=1+\frac{R_1}{R_2} $$ </p> 
+
+            
+
+    
+        
+        <a class="SubSection" name="ComplexNoninvertingAmplifier">3.7 &ensp; Complex Noninverting Amplifier</a>
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/complexNoninvertingAmplifier.svg" class="include"> <p class="caption">Figure 25:Opamp complex non-inverting amplifier</p> </div> <p class="BodyText"> Similar to a typical noninverting amplifier but with a complex impedances \( z_1 \) and \( z_2 \) instead of \( R_1 \) and \( R_2 \).<br /> Assuming no current into the opamp $$  i_1=i_2 $$ $$ \therefore v_-=v_o\frac{z_2}{z_1+z_2} $$ Given $$ v_o=A_v(v_+-v_-) $$ Substituing in for $$ v_o=A_v(v_i-v_o\frac{z_2}{z_1+z_2}) $$ Rearranging for $$ \frac{v_o}{v_i}=\frac{1}{\frac{1}{A_v}+\frac{z_2}{z_1+z_2}} $$ Assuming assuming \( A_v = \infty \) and the opamp isn't saturated $$ \frac{v_o}{v_i}=1+\frac{z_1}{z_2} $$ </p> 
+
+            
+
+    
+        
+        <a class="SubSection" name="Integrator">3.8 &ensp; Integrator</a>
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/integrator.svg" class="include"> <p class="caption">Figure 26:Opamp integrator</p> </div> <p class="BodyText"> It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here. Assuming no current into the opamp $$  i_r+i_c=0  $$ Using \( I=C\frac{dv}{dt} \) $$  I_c=C_1\frac{dv_o-dv_-}{dt}=-\frac{v_i-v_-}{R_1}  $$ Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \) $$  C_1\frac{dv_o}{dt}=-\frac{v_i}{R_1}  $$ Integrate for 0 to t where the opamp never saturates and \( R_1\) and \( C_1\) are constant $$ v_o=-\frac{1}{R_1C_1}\int_0^t v_i \,dt $$ </p> 
+
+            
+
+    
+        
+        <a class="SubSection" name="Differentiator">3.9 &ensp; Differentiator</a>
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/differentiator.svg" class="include"> <p class="caption">Figure 27:Opamp differentiator</p> </div> <p class="BodyText"> It is possible to derive the integrating action using the equations already derived in the complex inverting amplifier but will be explained from scratch here. Assuming no current into the opamp $$  i_r+i_c=0  $$ Using \( I=C\frac{dv}{dt} \) $$  I_c=C_1\frac{dv_i-dv_-}{dt}=-\frac{v_o-v_-}{R_1}  $$ Assuming \(A_v = \infty  \) then \(v_- = v_+= 0  \) $$  C_1\frac{dv_i}{dt}=-\frac{v_o}{R_1}  $$ Rearrange for $$ v_o=-R_1C_1\frac{ dv_i}{dt} $$ </p> 
+
+            
+
+    
+        
+        <a class="SubSection" name="SummingInvertingAmplifier">3.10 &ensp; Summing Inverting Amplifier</a>
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/summingInvertingAmplifier.svg" class="include"> <p class="caption">Figure 28:Opamp summing inverting amplifier</p> </div> <p class="BodyText"> Assuming no current into the opamp $$  i_1+i_2+i_3=-i_4  $$ $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{i2}-v_-}{R_2}+\frac{v_{i3}-v_-}{R_3}=-\frac{v_o-v_-}{R_4} $$ $$  \frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4+v_{o}R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}=v_- $$ $$  v_o=\frac{-A_v\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}{1+A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}}  $$ Assuming \( A_v\frac{R_1R_2R_3}{R_2R_3R_4+R_1R_3R_4+R_1R_2R_4+R_1R_2R_3}>>1 \) $$  v_o=-\frac{v_{i1}R_2R_3R_4+v_{i2}R_1R_3R_4+v_{i3}R_1R_2R_4}{R_1R_2R_3}  $$ if \( R_1=R_2=R_3=R_i\) $$  v_o=-\frac{R_4}{R_i}(v_{i1}+v_{i3}+v_{i3})  $$ </p> 
+
+            
+
+    
+        
+        <a class="SubSection" name="SummingNon-InvertingAmplifier">3.11 &ensp; Summing Non-Inverting Amplifier</a>
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/summingNoninvertingAmplifier.svg" class="include"> <p class="caption">Figure 29:Opamp summing non-inverting amplifier</p> </div> <p class="BodyText"> Assuming no current into the opamp $$  i_1+i_2+i_3=0  $$ $$  \frac{v_{i1}-v_+}{R_1}+\frac{v_{i2}-v_+}{R_2}+\frac{v_{i3}-v_+}{R_3}=0 $$ if \( R_1=R_2=R_3=R_i\) $$  \frac{v_{i1}+v_{i2}+v_{i3}}{3}=v_{+} $$ looking at \( v_-\) and assuming no current into the opamp $$  v_-=v_o\frac{R_5}{R_4+R_5}  $$ Subsitute into \( v_o=A_v(v_+-v_-)\) $$  v_o=A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3}-v_o\frac{R_5}{R_4+R_5})  $$ $$  v_o=\frac{A_v(\frac{v_{i1}+v_{i2}+v_{i3}}{3})}{(1+A_v\frac{R_5}{R_4+R_5})}  $$ Assuming \( A_v\frac{R_5}{R_4+R_5}>>1 \) $$  v_o=\frac{R_4+R_5}{R_5}(\frac{v_{i1}+v_{i2}+v_{i3}}{3})  $$ </p> 
+
+            
+
+    
+        
+        <a class="SubSection" name="DifferentialAmplifier">3.12 &ensp; Differential Amplifier</a>
+            
+            
+            
+            <div class="figure"> <img src="assets/svgs/opampCircuits/differentialAmplifier.svg" class="include"> <p class="caption">Figure 30:Opamp differential amplifier</p> </div> <p class="BodyText"> Looking at \( v_- \) and assuming no current into the opamp. $$  i_1+i_2=0  $$ $$  \frac{v_{i1}-v_-}{R_1}+\frac{v_{o}-v_-}{R_2}=0  $$ $$  R_2v_{i1}+R_1v_{o}=v_-(R_1+R_2)  $$ $$  \frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2}=v_-  $$ Looking at \( v_+ \) and assuming no current into the opamp. $$  v_+=v_{i2}\frac{R_4}{R_3+R_4}  $$ Subsitute into \( v_o=A_v(v_+-v_-)\) $$  v_o=A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}+R_1v_{o}}{R_1+R_2})  $$ $$  v_o=\frac{A_v(v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2})}{1+\frac{A_vR_1}{R_1+R_2}}  $$ Assuming \( \frac{A_vR_1}{(R_1+R_2)}>>1 \) $$  v_o=\frac{v_{i2}\frac{R_4}{R_3+R_4}-\frac{R_2v_{i1}}{R_1+R_2}}{\frac{R_1}{R_1+R_2}}  $$ $$  v_o=v_{i2}\frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}-\frac{R_2v_{i1}}{R_1}  $$ if \( R_1=R_3 \)  and \( R_2=R_4 \) $$  v_o=\frac{R_2}{R_1}(v_{i2}-v_{i1})  $$ </p> 
 
             
 
