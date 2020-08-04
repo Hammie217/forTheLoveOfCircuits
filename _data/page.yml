@@ -103,7 +103,7 @@
       Rearrange for
       $$  v_o=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$
       Assuming \(I_o\) is negligible
-      $$  \frac{v_o}{v_i}=\frac{v_ij\omega C_1R_1-I_oR_1}{1+j\omega C_1R_1}  $$
+      $$  \frac{v_o}{v_i}=\frac{v_ij\omega C_1R_1}{1+j\omega C_1R_1}  $$
       Convert into first-order Standard form
       $$  \frac{v_o}{v_i}=1\frac{j\frac{\omega}{\frac{1}{C_1R_1}} }{1+j\frac{\omega}{\frac{1}{C_1R_1}}}  $$
       </p>
